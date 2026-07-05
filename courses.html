@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="View and manage courses in StudyFlow."
+  >
+
+  <title>Courses | StudyFlow</title>
+</head>
+
+<body>
+  <header>
+    <nav aria-label="Main navigation">
+      <a href="index.html">StudyFlow</a>
+
+      <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="semesters.html">Semesters</a></li>
+        <li><a href="courses.html" aria-current="page">Courses</a></li>
+        <li><a href="tasks.html">Tasks</a></li>
+        <li><a href="notes.html">Notes</a></li>
+        <li><a href="study-planner.html">Study planner</a></li>
+        <li><a href="gpa-progress.html">GPA/progress</a></li>
+        <li><a href="search.html">Search</a></li>
+        <li><a href="notifications.html">Notifications</a></li>
+        <li><a href="settings.html">Settings</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="courses-title">
+      <h1 id="courses-title">Courses</h1>
+
+      <p>
+        Manage your courses, instructors, schedules, credit hours, grades, tasks,
+        notes, and study sessions.
+      </p>
+
+      <a href="#create-course-form">Add course</a>
+    </section>
+
+    <section aria-labelledby="course-list-title">
+      <h2 id="course-list-title">Current courses</h2>
+
+      <article>
+        <h3><a href="course-detail.html">Biology 101</a></h3>
+        <p>Code: BIO101</p>
+        <p>Instructor: Dr. Green</p>
+        <p>Schedule: Monday and Wednesday, 9:00 AM</p>
+        <p>Open tasks: 3</p>
+      </article>
+
+      <article>
+        <h3><a href="course-detail.html">Calculus I</a></h3>
+        <p>Code: MATH101</p>
+        <p>Instructor: Professor Lane</p>
+        <p>Schedule: Tuesday and Thursday, 11:00 AM</p>
+        <p>Open tasks: 2</p>
+      </article>
+
+      <article>
+        <h3><a href="course-detail.html">Computer Science 101</a></h3>
+        <p>Code: CS101</p>
+        <p>Instructor: Dr. Patel</p>
+        <p>Schedule: Monday and Friday, 1:00 PM</p>
+        <p>Open tasks: 3</p>
+      </article>
+    </section>
+
+    <section aria-labelledby="create-course-title" id="create-course-form">
+      <h2 id="create-course-title">Add course</h2>
+
+      <form action="#" method="post">
+        <div>
+          <label for="course-name">Course name</label>
+          <input
+            type="text"
+            id="course-name"
+            name="course-name"
+            required
+          >
+        </div>
+
+        <div>
+          <label for="course-code">Course code</label>
+          <input
+            type="text"
+            id="course-code"
+            name="course-code"
+          >
+        </div>
+
+        <div>
+          <label for="semester">Semester</label>
+          <select id="semester" name="semester" required>
+            <option value="">Select semester</option>
+            <option value="fall-2026">Fall 2026</option>
+            <option value="spring-2027">Spring 2027</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="instructor">Instructor</label>
+          <input
+            type="text"
+            id="instructor"
+            name="instructor"
+          >
+        </div>
+
+        <div>
+          <label for="credit-hours">Credit hours</label>
+          <input
+            type="number"
+            id="credit-hours"
+            name="credit-hours"
+            min="0"
+            step="0.5"
+          >
+        </div>
+
+        <div>
+          <label for="target-grade">Target grade</label>
+          <input
+            type="text"
+            id="target-grade"
+            name="target-grade"
+            placeholder="A"
+          >
+        </div>
+
+        <button type="submit">Save course</button>
+      </form>
+    </section>
+
+    <section aria-labelledby="empty-courses-title">
+      <h2 id="empty-courses-title">Empty state example</h2>
+
+      <p>
+        No courses yet. Add your first course so StudyFlow can organize your
+        tasks, notes, and study sessions.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 StudyFlow. Built for students who want better academic organization.</p>
+  </footer>
+</body>
+</html>
