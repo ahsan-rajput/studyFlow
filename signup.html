@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Create a StudyFlow account to organize semesters, courses, deadlines, notes, study sessions, and academic progress."
+  >
+
+  <title>Create Account | StudyFlow</title>
+</head>
+
+<body>
+  <header>
+    <nav aria-label="Main navigation">
+      <a href="index.html">StudyFlow</a>
+
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login.html">Log in</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="signup-title">
+      <h1 id="signup-title">Create your StudyFlow account</h1>
+
+      <p>
+        Start organizing your semester, courses, deadlines, notes, and study plans
+        in one academic workspace.
+      </p>
+
+      <form action="#" method="post">
+        <div>
+          <label for="full-name">Full name</label>
+          <input
+            type="text"
+            id="full-name"
+            name="full-name"
+            autocomplete="name"
+            required
+          >
+        </div>
+
+        <div>
+          <label for="email">Email address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            autocomplete="email"
+            required
+          >
+        </div>
+
+        <div>
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            autocomplete="new-password"
+            minlength="8"
+            required
+          >
+        </div>
+
+        <div>
+          <label for="confirm-password">Confirm password</label>
+          <input
+            type="password"
+            id="confirm-password"
+            name="confirm-password"
+            autocomplete="new-password"
+            minlength="8"
+            required
+          >
+        </div>
+
+        <div>
+          <label for="academic-level">Academic level</label>
+          <select id="academic-level" name="academic-level" required>
+            <option value="">Select your academic level</option>
+            <option value="high-school">High school</option>
+            <option value="college">College</option>
+            <option value="university">University</option>
+            <option value="graduate">Graduate student</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div>
+          <input
+            type="checkbox"
+            id="terms"
+            name="terms"
+            required
+          >
+          <label for="terms">
+            I agree to use StudyFlow as my academic planning workspace.
+          </label>
+        </div>
+
+        <button type="submit">Create account</button>
+      </form>
+
+      <p>
+        Already have an account?
+        <a href="login.html">Log in</a>
+      </p>
+    </section>
+
+    <section aria-labelledby="after-signup-title">
+      <h2 id="after-signup-title">What happens after signup?</h2>
+
+      <ol>
+        <li>Welcome to StudyFlow.</li>
+        <li>Create your first semester.</li>
+        <li>Add your first course.</li>
+        <li>Add your first deadline.</li>
+        <li>Start using your dashboard to manage academic priorities.</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 StudyFlow. Built for students who want better academic organization.</p>
+
+    <nav aria-label="Footer navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login.html">Log in</a></li>
+        <li><a href="forgot-password.html">Forgot password</a></li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+</html>
