@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Add your first academic deadline to StudyFlow during onboarding."
+  >
+
+  <title>Add First Deadline | StudyFlow</title>
+</head>
+
+<body>
+  <header>
+    <nav aria-label="Main navigation">
+      <a href="index.html">StudyFlow</a>
+
+      <ul>
+        <li><a href="onboarding-course.html">Back to course</a></li>
+        <li><a href="dashboard.html">Skip to dashboard</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="deadline-title">
+      <h1 id="deadline-title">Add your first deadline</h1>
+
+      <p>
+        Add one upcoming academic task so your dashboard can start showing useful
+        priorities.
+      </p>
+
+      <form action="#" method="post">
+        <div>
+          <label for="task-title">Task title</label>
+          <input
+            type="text"
+            id="task-title"
+            name="task-title"
+            placeholder="Chapter 1 reading"
+            required
+          >
+        </div>
+
+        <div>
+          <label for="task-type">Task type</label>
+          <select id="task-type" name="task-type" required>
+            <option value="">Select task type</option>
+            <option value="assignment">Assignment</option>
+            <option value="quiz">Quiz</option>
+            <option value="exam">Exam</option>
+            <option value="project">Project</option>
+            <option value="reading">Reading</option>
+            <option value="lab">Lab</option>
+            <option value="custom">Custom task</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="course">Course</label>
+          <select id="course" name="course" required>
+            <option value="">Select course</option>
+            <option value="first-course">My first course</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="due-date">Due date</label>
+          <input
+            type="date"
+            id="due-date"
+            name="due-date"
+            required
+          >
+        </div>
+
+        <div>
+          <label for="priority">Priority</label>
+          <select id="priority" name="priority" required>
+            <option value="">Select priority</option>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="estimated-effort">Estimated effort in hours</label>
+          <input
+            type="number"
+            id="estimated-effort"
+            name="estimated-effort"
+            min="0"
+            step="0.5"
+            placeholder="2"
+          >
+        </div>
+
+        <div>
+          <label for="task-description">Description</label>
+          <textarea
+            id="task-description"
+            name="task-description"
+            rows="5"
+            placeholder="Add instructions, details, or reminders for this task."
+          ></textarea>
+        </div>
+
+        <button type="submit">Save deadline</button>
+      </form>
+
+      <p>
+        Next step:
+        <a href="onboarding-gpa-goal.html">Set an optional GPA goal</a>
+      </p>
+    </section>
+
+    <section aria-labelledby="deadline-help-title">
+      <h2 id="deadline-help-title">What counts as a deadline?</h2>
+
+      <ul>
+        <li>Assignments</li>
+        <li>Quizzes</li>
+        <li>Exams</li>
+        <li>Projects</li>
+        <li>Readings</li>
+        <li>Labs</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 StudyFlow. Built for students who want better academic organization.</p>
+
+    <nav aria-label="Footer navigation">
+      <ul>
+        <li><a href="onboarding-course.html">Back: course</a></li>
+        <li><a href="onboarding-gpa-goal.html">Next: GPA goal</a></li>
+        <li><a href="dashboard.html">Skip to dashboard</a></li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+</html>
