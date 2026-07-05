@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="View course details, tasks, notes, study sessions, and progress in StudyFlow."
+  >
+
+  <title>Course Detail | StudyFlow</title>
+</head>
+
+<body>
+  <header>
+    <nav aria-label="Main navigation">
+      <a href="index.html">StudyFlow</a>
+
+      <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="semesters.html">Semesters</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="tasks.html">Tasks</a></li>
+        <li><a href="notes.html">Notes</a></li>
+        <li><a href="study-planner.html">Study planner</a></li>
+        <li><a href="gpa-progress.html">GPA/progress</a></li>
+        <li><a href="settings.html">Settings</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="course-detail-title">
+      <h1 id="course-detail-title">Biology 101</h1>
+
+      <p>Course code: BIO101</p>
+      <p>Semester: Fall 2026</p>
+      <p>Instructor: Dr. Green</p>
+      <p>Schedule: Monday and Wednesday, 9:00 AM</p>
+      <p>Location: Science Building, Room 204</p>
+      <p>Credit hours: 3</p>
+      <p>Target grade: A</p>
+
+      <a href="#edit-course-form">Edit course</a>
+    </section>
+
+    <section aria-labelledby="course-progress-title">
+      <h2 id="course-progress-title">Course progress</h2>
+
+      <ul>
+        <li>Open tasks: 3</li>
+        <li>Completed tasks: 5</li>
+        <li>Overdue tasks: 1</li>
+        <li>Notes created: 4</li>
+        <li>Study sessions completed: 2</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="course-tasks-title">
+      <h2 id="course-tasks-title">Course tasks</h2>
+
+      <article>
+        <h3>Finish biology lab notes</h3>
+        <p>Type: Lab</p>
+        <p>Due: Today</p>
+        <p>Priority: High</p>
+      </article>
+
+      <article>
+        <h3>Read chapter 4</h3>
+        <p>Type: Reading</p>
+        <p>Due: In 3 days</p>
+        <p>Priority: Medium</p>
+      </article>
+    </section>
+
+    <section aria-labelledby="course-notes-title">
+      <h2 id="course-notes-title">Course notes</h2>
+
+      <article>
+        <h3>Cell structure notes</h3>
+        <p>Important: Yes</p>
+        <p>Updated today.</p>
+      </article>
+
+      <article>
+        <h3>Lab safety notes</h3>
+        <p>Important: No</p>
+        <p>Updated last week.</p>
+      </article>
+    </section>
+
+    <section aria-labelledby="course-study-title">
+      <h2 id="course-study-title">Study sessions</h2>
+
+      <article>
+        <h3>Biology lab review</h3>
+        <p>Time: Tomorrow, 5:00 PM - 6:00 PM</p>
+        <p>Goal: Review lab instructions and key vocabulary.</p>
+      </article>
+    </section>
+
+    <section aria-labelledby="edit-course-title" id="edit-course-form">
+      <h2 id="edit-course-title">Edit course</h2>
+
+      <form action="#" method="post">
+        <div>
+          <label for="course-name">Course name</label>
+          <input
+            type="text"
+            id="course-name"
+            name="course-name"
+            value="Biology 101"
+            required
+          >
+        </div>
+
+        <div>
+          <label for="course-code">Course code</label>
+          <input
+            type="text"
+            id="course-code"
+            name="course-code"
+            value="BIO101"
+          >
+        </div>
+
+        <div>
+          <label for="instructor">Instructor</label>
+          <input
+            type="text"
+            id="instructor"
+            name="instructor"
+            value="Dr. Green"
+          >
+        </div>
+
+        <div>
+          <label for="course-location">Location</label>
+          <input
+            type="text"
+            id="course-location"
+            name="course-location"
+            value="Science Building, Room 204"
+          >
+        </div>
+
+        <div>
+          <input type="checkbox" id="archive-course" name="archive-course">
+          <label for="archive-course">Archive this course</label>
+        </div>
+
+        <button type="submit">Update course</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 StudyFlow. Built for students who want better academic organization.</p>
+  </footer>
+</body>
+</html>
