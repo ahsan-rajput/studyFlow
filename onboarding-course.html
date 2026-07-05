@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Add your first course to StudyFlow during onboarding."
+  >
+
+  <title>Add First Course | StudyFlow</title>
+</head>
+
+<body>
+  <header>
+    <nav aria-label="Main navigation">
+      <a href="index.html">StudyFlow</a>
+
+      <ul>
+        <li><a href="onboarding-semester.html">Back to semester</a></li>
+        <li><a href="dashboard.html">Skip to dashboard</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="course-title">
+      <h1 id="course-title">Add your first course</h1>
+
+      <p>
+        Courses are the center of StudyFlow. Tasks, notes, study sessions, and
+        progress tracking will connect back to your courses.
+      </p>
+
+      <form action="#" method="post">
+        <div>
+          <label for="course-name">Course name</label>
+          <input
+            type="text"
+            id="course-name"
+            name="course-name"
+            placeholder="Introduction to Computer Science"
+            required
+          >
+        </div>
+
+        <div>
+          <label for="course-code">Course code</label>
+          <input
+            type="text"
+            id="course-code"
+            name="course-code"
+            placeholder="CS101"
+          >
+        </div>
+
+        <div>
+          <label for="instructor">Instructor</label>
+          <input
+            type="text"
+            id="instructor"
+            name="instructor"
+            placeholder="Dr. Smith"
+          >
+        </div>
+
+        <div>
+          <label for="credit-hours">Credit hours</label>
+          <input
+            type="number"
+            id="credit-hours"
+            name="credit-hours"
+            min="0"
+            step="0.5"
+            placeholder="3"
+          >
+        </div>
+
+        <div>
+          <label for="course-schedule">Schedule</label>
+          <input
+            type="text"
+            id="course-schedule"
+            name="course-schedule"
+            placeholder="Monday and Wednesday, 10:00 AM"
+          >
+        </div>
+
+        <div>
+          <label for="course-location">Location</label>
+          <input
+            type="text"
+            id="course-location"
+            name="course-location"
+            placeholder="Room 204 or online"
+          >
+        </div>
+
+        <div>
+          <label for="target-grade">Target grade</label>
+          <input
+            type="text"
+            id="target-grade"
+            name="target-grade"
+            placeholder="A"
+          >
+        </div>
+
+        <button type="submit">Save course</button>
+      </form>
+
+      <p>
+        Next step:
+        <a href="onboarding-deadline.html">Add your first deadline</a>
+      </p>
+    </section>
+
+    <section aria-labelledby="course-help-title">
+      <h2 id="course-help-title">Why courses matter</h2>
+
+      <p>
+        Once your courses exist, StudyFlow can organize tasks, notes, study
+        sessions, and dashboard priorities by course.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 StudyFlow. Built for students who want better academic organization.</p>
+
+    <nav aria-label="Footer navigation">
+      <ul>
+        <li><a href="onboarding-semester.html">Back: semester</a></li>
+        <li><a href="onboarding-deadline.html">Next: deadline</a></li>
+        <li><a href="dashboard.html">Skip to dashboard</a></li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+</html>
