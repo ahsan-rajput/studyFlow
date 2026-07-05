@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Track GPA goals, course progress, academic performance, and semester progress in StudyFlow."
+  >
+
+  <title>GPA and Progress | StudyFlow</title>
+</head>
+
+<body>
+  <header>
+    <nav aria-label="Main navigation">
+      <a href="index.html">StudyFlow</a>
+
+      <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="semesters.html">Semesters</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="tasks.html">Tasks</a></li>
+        <li><a href="notes.html">Notes</a></li>
+        <li><a href="study-planner.html">Study planner</a></li>
+        <li><a href="gpa-progress.html" aria-current="page">GPA/progress</a></li>
+        <li><a href="search.html">Search</a></li>
+        <li><a href="notifications.html">Notifications</a></li>
+        <li><a href="settings.html">Settings</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="gpa-progress-title">
+      <h1 id="gpa-progress-title">GPA and progress</h1>
+
+      <p>
+        Track your GPA goal, course progress, completed work, and academic risk
+        areas for the current semester.
+      </p>
+
+      <a href="#gpa-goal-form">Update GPA goal</a>
+    </section>
+
+    <section aria-labelledby="gpa-summary-title">
+      <h2 id="gpa-summary-title">GPA summary</h2>
+
+      <ul>
+        <li>Current GPA: 3.40</li>
+        <li>Target GPA: 3.70</li>
+        <li>GPA scale: 4.0</li>
+        <li>Status: On track with consistent work completion</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="course-progress-title">
+      <h2 id="course-progress-title">Course progress</h2>
+
+      <article>
+        <h3>Biology 101</h3>
+        <p>Credit hours: 3</p>
+        <p>Current grade: B+</p>
+        <p>Target grade: A</p>
+        <p>Task completion: 70%</p>
+      </article>
+
+      <article>
+        <h3>Calculus I</h3>
+        <p>Credit hours: 4</p>
+        <p>Current grade: B</p>
+        <p>Target grade: A-</p>
+        <p>Task completion: 65%</p>
+      </article>
+
+      <article>
+        <h3>Computer Science 101</h3>
+        <p>Credit hours: 3</p>
+        <p>Current grade: A-</p>
+        <p>Target grade: A</p>
+        <p>Task completion: 80%</p>
+      </article>
+    </section>
+
+    <section aria-labelledby="progress-alerts-title">
+      <h2 id="progress-alerts-title">Progress alerts</h2>
+
+      <ul>
+        <li>Calculus I needs attention because task completion is below the semester average.</li>
+        <li>Biology 101 has a high-priority lab task due today.</li>
+        <li>Computer Science 101 is close to the target grade but has a quiz coming soon.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="semester-progress-title">
+      <h2 id="semester-progress-title">Semester progress</h2>
+
+      <ul>
+        <li>Total tasks: 22</li>
+        <li>Completed tasks: 14</li>
+        <li>Open tasks: 8</li>
+        <li>Overdue tasks: 2</li>
+        <li>Study sessions completed: 5</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="gpa-goal-title" id="gpa-goal-form">
+      <h2 id="gpa-goal-title">Update GPA goal</h2>
+
+      <form action="#" method="post">
+        <div>
+          <label for="current-gpa">Current GPA</label>
+          <input
+            type="number"
+            id="current-gpa"
+            name="current-gpa"
+            min="0"
+            max="4"
+            step="0.01"
+            value="3.40"
+          >
+        </div>
+
+        <div>
+          <label for="target-gpa">Target GPA</label>
+          <input
+            type="number"
+            id="target-gpa"
+            name="target-gpa"
+            min="0"
+            max="4"
+            step="0.01"
+            value="3.70"
+          >
+        </div>
+
+        <div>
+          <label for="gpa-scale">GPA scale</label>
+          <select id="gpa-scale" name="gpa-scale">
+            <option value="">Select GPA scale</option>
+            <option value="4.0" selected>4.0 scale</option>
+            <option value="5.0">5.0 scale</option>
+            <option value="percentage">Percentage</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="goal-notes">Goal notes</label>
+          <textarea
+            id="goal-notes"
+            name="goal-notes"
+            rows="5"
+          >Focus on improving consistency before exams.</textarea>
+        </div>
+
+        <button type="submit">Save GPA goal</button>
+      </form>
+    </section>
+
+    <section aria-labelledby="empty-progress-title">
+      <h2 id="empty-progress-title">Empty state example</h2>
+
+      <p>
+        No GPA goal set yet. Add a GPA goal to help StudyFlow show progress and
+        academic focus areas.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 StudyFlow. Built for students who want better academic organization.</p>
+  </footer>
+</body>
+</html>
