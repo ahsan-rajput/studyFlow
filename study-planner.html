@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Plan and track study sessions in StudyFlow."
+  >
+
+  <title>Study Planner | StudyFlow</title>
+</head>
+
+<body>
+  <header>
+    <nav aria-label="Main navigation">
+      <a href="index.html">StudyFlow</a>
+
+      <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="semesters.html">Semesters</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="tasks.html">Tasks</a></li>
+        <li><a href="notes.html">Notes</a></li>
+        <li><a href="study-planner.html" aria-current="page">Study planner</a></li>
+        <li><a href="gpa-progress.html">GPA/progress</a></li>
+        <li><a href="search.html">Search</a></li>
+        <li><a href="notifications.html">Notifications</a></li>
+        <li><a href="settings.html">Settings</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="study-planner-title">
+      <h1 id="study-planner-title">Study planner</h1>
+
+      <p>
+        Plan study sessions, connect them to courses or tasks, and track planned
+        study time versus completed study time.
+      </p>
+
+      <a href="#create-study-session-form">Create study session</a>
+    </section>
+
+    <section aria-labelledby="today-study-title">
+      <h2 id="today-study-title">Today’s study sessions</h2>
+
+      <article>
+        <h3>Calculus review session</h3>
+        <p>Course: Calculus I</p>
+        <p>Time: 6:00 PM - 7:00 PM</p>
+        <p>Goal: Practice limits and derivative problems.</p>
+        <p>Status: Planned</p>
+      </article>
+    </section>
+
+    <section aria-labelledby="upcoming-study-title">
+      <h2 id="upcoming-study-title">Upcoming study sessions</h2>
+
+      <article>
+        <h3>Biology lab preparation</h3>
+        <p>Course: Biology 101</p>
+        <p>Time: Tomorrow, 5:00 PM - 6:00 PM</p>
+        <p>Linked task: Finish biology lab notes</p>
+        <p>Status: Planned</p>
+      </article>
+
+      <article>
+        <h3>Computer science quiz review</h3>
+        <p>Course: Computer Science 101</p>
+        <p>Time: Friday, 4:00 PM - 5:30 PM</p>
+        <p>Linked task: Prepare for computer science quiz</p>
+        <p>Status: Planned</p>
+      </article>
+    </section>
+
+    <section aria-labelledby="completed-study-title">
+      <h2 id="completed-study-title">Completed study sessions</h2>
+
+      <article>
+        <h3>Biology vocabulary review</h3>
+        <p>Course: Biology 101</p>
+        <p>Completed: Yesterday</p>
+        <p>Planned duration: 45 minutes</p>
+        <p>Completed duration: 45 minutes</p>
+      </article>
+    </section>
+
+    <section aria-labelledby="study-summary-title">
+      <h2 id="study-summary-title">Study time summary</h2>
+
+      <ul>
+        <li>Planned study time this week: 6 hours</li>
+        <li>Completed study time this week: 2.5 hours</li>
+        <li>Missed study sessions: 1</li>
+        <li>Most studied course: Biology 101</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="create-study-session-title" id="create-study-session-form">
+      <h2 id="create-study-session-title">Create study session</h2>
+
+      <form action="#" method="post">
+        <div>
+          <label for="session-title">Session title</label>
+          <input
+            type="text"
+            id="session-title"
+            name="session-title"
+            required
+          >
+        </div>
+
+        <div>
+          <label for="session-course">Course</label>
+          <select id="session-course" name="session-course" required>
+            <option value="">Select course</option>
+            <option value="biology-101">Biology 101</option>
+            <option value="calculus-1">Calculus I</option>
+            <option value="cs-101">Computer Science 101</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="linked-task">Linked task</label>
+          <select id="linked-task" name="linked-task">
+            <option value="">No linked task</option>
+            <option value="biology-lab-notes">Finish biology lab notes</option>
+            <option value="cs-quiz">Prepare for computer science quiz</option>
+            <option value="calculus-practice">Review calculus practice problems</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="session-date">Session date</label>
+          <input
+            type="date"
+            id="session-date"
+            name="session-date"
+            required
+          >
+        </div>
+
+        <div>
+          <label for="start-time">Start time</label>
+          <input
+            type="time"
+            id="start-time"
+            name="start-time"
+            required
+          >
+        </div>
+
+        <div>
+          <label for="end-time">End time</label>
+          <input
+            type="time"
+            id="end-time"
+            name="end-time"
+            required
+          >
+        </div>
+
+        <div>
+          <label for="session-goal">Study goal</label>
+          <textarea
+            id="session-goal"
+            name="session-goal"
+            rows="5"
+            placeholder="What do you want to complete during this session?"
+          ></textarea>
+        </div>
+
+        <button type="submit">Save study session</button>
+      </form>
+    </section>
+
+    <section aria-labelledby="empty-study-title">
+      <h2 id="empty-study-title">Empty state example</h2>
+
+      <p>
+        No study sessions scheduled. Plan a study session to connect your time
+        with your academic goals.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 StudyFlow. Built for students who want better academic organization.</p>
+  </footer>
+</body>
+</html>
