@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Manage StudyFlow profile settings, notification preferences, theme preference, and academic preferences."
+  >
+
+  <title>Settings | StudyFlow</title>
+</head>
+
+<body>
+  <header>
+    <nav aria-label="Main navigation">
+      <a href="index.html">StudyFlow</a>
+
+      <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="semesters.html">Semesters</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="tasks.html">Tasks</a></li>
+        <li><a href="notes.html">Notes</a></li>
+        <li><a href="study-planner.html">Study planner</a></li>
+        <li><a href="gpa-progress.html">GPA/progress</a></li>
+        <li><a href="search.html">Search</a></li>
+        <li><a href="notifications.html">Notifications</a></li>
+        <li><a href="settings.html" aria-current="page">Settings</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="settings-title">
+      <h1 id="settings-title">Settings</h1>
+
+      <p>
+        Manage your StudyFlow profile, academic preferences, notification
+        preferences, and account settings.
+      </p>
+    </section>
+
+    <section aria-labelledby="profile-settings-title">
+      <h2 id="profile-settings-title">Profile settings</h2>
+
+      <form action="#" method="post">
+        <div>
+          <label for="full-name">Full name</label>
+          <input
+            type="text"
+            id="full-name"
+            name="full-name"
+            value="Ahsan Student"
+            required
+          >
+        </div>
+
+        <div>
+          <label for="email">Email address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value="student@example.com"
+            required
+          >
+        </div>
+
+        <div>
+          <label for="timezone">Timezone</label>
+          <select id="timezone" name="timezone">
+            <option value="">Select timezone</option>
+            <option value="america-new-york">America/New_York</option>
+            <option value="america-chicago">America/Chicago</option>
+            <option value="america-los-angeles">America/Los_Angeles</option>
+            <option value="europe-london">Europe/London</option>
+            <option value="asia-karachi">Asia/Karachi</option>
+          </select>
+        </div>
+
+        <button type="submit">Save profile</button>
+      </form>
+    </section>
+
+    <section aria-labelledby="academic-preferences-title">
+      <h2 id="academic-preferences-title">Academic preferences</h2>
+
+      <form action="#" method="post">
+        <div>
+          <label for="default-semester">Default semester</label>
+          <select id="default-semester" name="default-semester">
+            <option value="">Select default semester</option>
+            <option value="fall-2026">Fall 2026</option>
+            <option value="spring-2027">Spring 2027</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="default-gpa-scale">Default GPA scale</label>
+          <select id="default-gpa-scale" name="default-gpa-scale">
+            <option value="">Select GPA scale</option>
+            <option value="4.0">4.0 scale</option>
+            <option value="5.0">5.0 scale</option>
+            <option value="percentage">Percentage</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="week-start">Week starts on</label>
+          <select id="week-start" name="week-start">
+            <option value="">Select day</option>
+            <option value="sunday">Sunday</option>
+            <option value="monday">Monday</option>
+          </select>
+        </div>
+
+        <button type="submit">Save academic preferences</button>
+      </form>
+    </section>
+
+    <section aria-labelledby="notification-preferences-title" id="notification-preferences">
+      <h2 id="notification-preferences-title">Notification preferences</h2>
+
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Reminder types</legend>
+
+          <div>
+            <input
+              type="checkbox"
+              id="deadline-reminders"
+              name="deadline-reminders"
+              checked
+            >
+            <label for="deadline-reminders">Deadline reminders</label>
+          </div>
+
+          <div>
+            <input
+              type="checkbox"
+              id="overdue-alerts"
+              name="overdue-alerts"
+              checked
+            >
+            <label for="overdue-alerts">Overdue task alerts</label>
+          </div>
+
+          <div>
+            <input
+              type="checkbox"
+              id="study-session-reminders"
+              name="study-session-reminders"
+              checked
+            >
+            <label for="study-session-reminders">Study session reminders</label>
+          </div>
+
+          <div>
+            <input
+              type="checkbox"
+              id="progress-updates"
+              name="progress-updates"
+            >
+            <label for="progress-updates">Progress updates</label>
+          </div>
+        </fieldset>
+
+        <div>
+          <label for="reminder-timing">Default reminder timing</label>
+          <select id="reminder-timing" name="reminder-timing">
+            <option value="">Select reminder timing</option>
+            <option value="same-day">Same day</option>
+            <option value="one-day-before">1 day before</option>
+            <option value="two-days-before">2 days before</option>
+            <option value="one-week-before">1 week before</option>
+          </select>
+        </div>
+
+        <button type="submit">Save notification preferences</button>
+      </form>
+    </section>
+
+    <section aria-labelledby="appearance-title">
+      <h2 id="appearance-title">Appearance</h2>
+
+      <form action="#" method="post">
+        <div>
+          <label for="theme">Theme preference</label>
+          <select id="theme" name="theme">
+            <option value="">Select theme</option>
+            <option value="system">Use system setting</option>
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+          </select>
+        </div>
+
+        <button type="submit">Save appearance preference</button>
+      </form>
+    </section>
+
+    <section aria-labelledby="account-title">
+      <h2 id="account-title">Account</h2>
+
+      <form action="#" method="post">
+        <div>
+          <label for="current-password">Current password</label>
+          <input
+            type="password"
+            id="current-password"
+            name="current-password"
+            autocomplete="current-password"
+          >
+        </div>
+
+        <div>
+          <label for="new-password">New password</label>
+          <input
+            type="password"
+            id="new-password"
+            name="new-password"
+            autocomplete="new-password"
+            minlength="8"
+          >
+        </div>
+
+        <button type="submit">Update password</button>
+      </form>
+
+      <form action="#" method="post">
+        <div>
+          <input
+            type="checkbox"
+            id="request-account-deletion"
+            name="request-account-deletion"
+          >
+          <label for="request-account-deletion">
+            I understand this would request account deletion in a real backend version.
+          </label>
+        </div>
+
+        <button type="submit">Request account deletion</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 StudyFlow. Built for students who want better academic organization.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="View StudyFlow notifications for deadlines, overdue tasks, study sessions, and academic alerts."
+  >
+
+  <title>Notifications | StudyFlow</title>
+</head>
+
+<body>
+  <header>
+    <nav aria-label="Main navigation">
+      <a href="index.html">StudyFlow</a>
+
+      <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="semesters.html">Semesters</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="tasks.html">Tasks</a></li>
+        <li><a href="notes.html">Notes</a></li>
+        <li><a href="study-planner.html">Study planner</a></li>
+        <li><a href="gpa-progress.html">GPA/progress</a></li>
+        <li><a href="search.html">Search</a></li>
+        <li><a href="notifications.html" aria-current="page">Notifications</a></li>
+        <li><a href="settings.html">Settings</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="notifications-title">
+      <h1 id="notifications-title">Notifications</h1>
+
+      <p>
+        Review deadline reminders, overdue alerts, study session reminders, and
+        academic recommendations.
+      </p>
+
+      <a href="settings.html#notification-preferences">Manage notification preferences</a>
+    </section>
+
+    <section aria-labelledby="unread-notifications-title">
+      <h2 id="unread-notifications-title">Unread notifications</h2>
+
+      <article>
+        <h3>Biology lab notes are due today</h3>
+        <p>Type: Deadline reminder</p>
+        <p>Course: Biology 101</p>
+        <p>Status: Unread</p>
+      </article>
+
+      <article>
+        <h3>Chemistry worksheet is overdue</h3>
+        <p>Type: Overdue task alert</p>
+        <p>Course: Chemistry 101</p>
+        <p>Status: Unread</p>
+      </article>
+
+      <article>
+        <h3>Calculus review session starts this evening</h3>
+        <p>Type: Study session reminder</p>
+        <p>Course: Calculus I</p>
+        <p>Status: Unread</p>
+      </article>
+    </section>
+
+    <section aria-labelledby="read-notifications-title">
+      <h2 id="read-notifications-title">Read notifications</h2>
+
+      <article>
+        <h3>Computer science quiz is coming soon</h3>
+        <p>Type: Upcoming deadline</p>
+        <p>Course: Computer Science 101</p>
+        <p>Status: Read</p>
+      </article>
+
+      <article>
+        <h3>You completed a study session</h3>
+        <p>Type: Study progress update</p>
+        <p>Course: Biology 101</p>
+        <p>Status: Read</p>
+      </article>
+    </section>
+
+    <section aria-labelledby="notification-actions-title">
+      <h2 id="notification-actions-title">Notification actions</h2>
+
+      <form action="#" method="post">
+        <div>
+          <input
+            type="checkbox"
+            id="mark-all-read"
+            name="mark-all-read"
+          >
+          <label for="mark-all-read">Mark all notifications as read</label>
+        </div>
+
+        <div>
+          <input
+            type="checkbox"
+            id="clear-read"
+            name="clear-read"
+          >
+          <label for="clear-read">Clear read notifications</label>
+        </div>
+
+        <button type="submit">Apply notification action</button>
+      </form>
+    </section>
+
+    <section aria-labelledby="empty-notifications-title">
+      <h2 id="empty-notifications-title">Empty state example</h2>
+
+      <p>
+        No notifications yet. When deadlines, overdue tasks, or study sessions
+        need attention, StudyFlow will show alerts here.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 StudyFlow. Built for students who want better academic organization.</p>
+  </footer>
+</body>
+</html>
