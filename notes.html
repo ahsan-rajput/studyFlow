@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Create, organize, and search course notes in StudyFlow."
+  >
+
+  <title>Notes | StudyFlow</title>
+</head>
+
+<body>
+  <header>
+    <nav aria-label="Main navigation">
+      <a href="index.html">StudyFlow</a>
+
+      <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="semesters.html">Semesters</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="tasks.html">Tasks</a></li>
+        <li><a href="notes.html" aria-current="page">Notes</a></li>
+        <li><a href="study-planner.html">Study planner</a></li>
+        <li><a href="gpa-progress.html">GPA/progress</a></li>
+        <li><a href="search.html">Search</a></li>
+        <li><a href="notifications.html">Notifications</a></li>
+        <li><a href="settings.html">Settings</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="notes-title">
+      <h1 id="notes-title">Notes</h1>
+
+      <p>
+        Keep course notes organized by class, importance, and topic so you can
+        find important academic information later.
+      </p>
+
+      <a href="#create-note-form">Create note</a>
+    </section>
+
+    <section aria-labelledby="note-search-title">
+      <h2 id="note-search-title">Find notes</h2>
+
+      <form action="#" method="get">
+        <div>
+          <label for="note-search">Search notes</label>
+          <input
+            type="search"
+            id="note-search"
+            name="note-search"
+            placeholder="Search by title, content, or tag"
+          >
+        </div>
+
+        <div>
+          <label for="course-filter">Course</label>
+          <select id="course-filter" name="course-filter">
+            <option value="">All courses</option>
+            <option value="biology-101">Biology 101</option>
+            <option value="calculus-1">Calculus I</option>
+            <option value="cs-101">Computer Science 101</option>
+          </select>
+        </div>
+
+        <button type="submit">Search notes</button>
+      </form>
+    </section>
+
+    <section aria-labelledby="important-notes-title">
+      <h2 id="important-notes-title">Important notes</h2>
+
+      <article>
+        <h3>Biology cell structure notes</h3>
+        <p>Course: Biology 101</p>
+        <p>Important: Yes</p>
+        <p>Tags: cells, exam-review, lab</p>
+        <p>Updated today.</p>
+      </article>
+
+      <article>
+        <h3>Calculus derivative rules</h3>
+        <p>Course: Calculus I</p>
+        <p>Important: Yes</p>
+        <p>Tags: derivatives, formulas</p>
+        <p>Updated yesterday.</p>
+      </article>
+    </section>
+
+    <section aria-labelledby="all-notes-title">
+      <h2 id="all-notes-title">All notes</h2>
+
+      <article>
+        <h3>Lab safety notes</h3>
+        <p>Course: Biology 101</p>
+        <p>Important: No</p>
+        <p>Updated last week.</p>
+      </article>
+
+      <article>
+        <h3>Programming basics</h3>
+        <p>Course: Computer Science 101</p>
+        <p>Important: No</p>
+        <p>Updated 3 days ago.</p>
+      </article>
+    </section>
+
+    <section aria-labelledby="create-note-title" id="create-note-form">
+      <h2 id="create-note-title">Create note</h2>
+
+      <form action="#" method="post">
+        <div>
+          <label for="note-title">Note title</label>
+          <input
+            type="text"
+            id="note-title"
+            name="note-title"
+            required
+          >
+        </div>
+
+        <div>
+          <label for="note-course">Course</label>
+          <select id="note-course" name="note-course" required>
+            <option value="">Select course</option>
+            <option value="biology-101">Biology 101</option>
+            <option value="calculus-1">Calculus I</option>
+            <option value="cs-101">Computer Science 101</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="note-tags">Tags</label>
+          <input
+            type="text"
+            id="note-tags"
+            name="note-tags"
+            placeholder="exam-review, formulas, lab"
+          >
+        </div>
+
+        <div>
+          <input
+            type="checkbox"
+            id="important-note"
+            name="important-note"
+          >
+          <label for="important-note">Mark as important</label>
+        </div>
+
+        <div>
+          <label for="note-content">Note content</label>
+          <textarea
+            id="note-content"
+            name="note-content"
+            rows="8"
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit">Save note</button>
+      </form>
+    </section>
+
+    <section aria-labelledby="empty-notes-title">
+      <h2 id="empty-notes-title">Empty state example</h2>
+
+      <p>
+        No notes found. Create a note or adjust your search filters.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 StudyFlow. Built for students who want better academic organization.</p>
+  </footer>
+</body>
+</html>
