@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="StudyFlow dashboard for viewing academic tasks, deadlines, courses, notes, study sessions, GPA goals, and smart recommendations."
+  >
+
+  <title>Dashboard | StudyFlow</title>
+</head>
+
+<body>
+  <header>
+    <nav aria-label="Main navigation">
+      <a href="index.html">StudyFlow</a>
+
+      <ul>
+        <li><a href="dashboard.html" aria-current="page">Dashboard</a></li>
+        <li><a href="semesters.html">Semesters</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="tasks.html">Tasks</a></li>
+        <li><a href="notes.html">Notes</a></li>
+        <li><a href="study-planner.html">Study planner</a></li>
+        <li><a href="gpa-progress.html">GPA/progress</a></li>
+        <li><a href="search.html">Search</a></li>
+        <li><a href="notifications.html">Notifications</a></li>
+        <li><a href="settings.html">Settings</a></li>
+        <li><a href="login.html">Log out</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="dashboard-title">
+      <h1 id="dashboard-title">Your StudyFlow dashboard</h1>
+
+      <p>
+        This dashboard gives you a static preview of your academic workload,
+        priorities, deadlines, study sessions, notes, and progress.
+      </p>
+    </section>
+
+    <section aria-labelledby="overview-title">
+      <h2 id="overview-title">Academic overview</h2>
+
+      <ul>
+        <li>Active semester: Fall 2026</li>
+        <li>Total courses: 4</li>
+        <li>Open tasks: 8</li>
+        <li>Overdue tasks: 2</li>
+        <li>Study sessions today: 1</li>
+        <li>Current GPA goal: 3.70</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="todays-tasks-title">
+      <h2 id="todays-tasks-title">Today’s tasks</h2>
+
+      <article>
+        <h3>Finish biology lab notes</h3>
+        <p>Course: Biology 101</p>
+        <p>Due: Today</p>
+        <p>Priority: High</p>
+      </article>
+
+      <article>
+        <h3>Review calculus practice problems</h3>
+        <p>Course: Calculus I</p>
+        <p>Due: Today</p>
+        <p>Priority: Medium</p>
+      </article>
+    </section>
+
+    <section aria-labelledby="upcoming-deadlines-title">
+      <h2 id="upcoming-deadlines-title">Upcoming deadlines</h2>
+
+      <ul>
+        <li>English essay draft — due in 2 days</li>
+        <li>Computer science quiz — due in 3 days</li>
+        <li>History reading response — due in 5 days</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="overdue-title">
+      <h2 id="overdue-title">Overdue tasks</h2>
+
+      <article>
+        <h3>Submit chemistry worksheet</h3>
+        <p>Course: Chemistry 101</p>
+        <p>Was due: Yesterday</p>
+        <p>Priority: High</p>
+      </article>
+
+      <article>
+        <h3>Upload lecture reflection</h3>
+        <p>Course: Sociology 200</p>
+        <p>Was due: 2 days ago</p>
+        <p>Priority: Medium</p>
+      </article>
+    </section>
+
+    <section aria-labelledby="course-attention-title">
+      <h2 id="course-attention-title">Courses needing attention</h2>
+
+      <ol>
+        <li>Biology 101 — high-priority lab deadline today</li>
+        <li>Chemistry 101 — overdue worksheet</li>
+        <li>Computer Science 101 — quiz coming soon</li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="study-sessions-title">
+      <h2 id="study-sessions-title">Study sessions for today</h2>
+
+      <article>
+        <h3>Calculus review session</h3>
+        <p>Time: 6:00 PM - 7:00 PM</p>
+        <p>Goal: Practice limits and derivatives.</p>
+      </article>
+    </section>
+
+    <section aria-labelledby="gpa-status-title">
+      <h2 id="gpa-status-title">GPA goal status</h2>
+
+      <p>Current GPA: 3.40</p>
+      <p>Target GPA: 3.70</p>
+      <p>Status: On track, but needs consistent task completion.</p>
+    </section>
+
+    <section aria-labelledby="high-priority-title">
+      <h2 id="high-priority-title">High-priority tasks</h2>
+
+      <ul>
+        <li>Finish biology lab notes</li>
+        <li>Submit chemistry worksheet</li>
+        <li>Prepare for computer science quiz</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="recent-notes-title">
+      <h2 id="recent-notes-title">Recently updated notes</h2>
+
+      <article>
+        <h3>Biology cell structure notes</h3>
+        <p>Updated today.</p>
+      </article>
+
+      <article>
+        <h3>Calculus derivative rules</h3>
+        <p>Updated yesterday.</p>
+      </article>
+    </section>
+
+    <section aria-labelledby="recommendations-title">
+      <h2 id="recommendations-title">Smart recommendations</h2>
+
+      <ul>
+        <li>Focus on overdue chemistry work before starting new low-priority tasks.</li>
+        <li>Schedule extra study time for Biology 101 because a lab deadline is due today.</li>
+        <li>Review computer science notes before the upcoming quiz.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="empty-states-title">
+      <h2 id="empty-states-title">Example empty states</h2>
+
+      <article>
+        <h3>No deadlines this week</h3>
+        <p>When there are no upcoming deadlines, StudyFlow will show a helpful empty state instead of a blank section.</p>
+      </article>
+
+      <article>
+        <h3>No study sessions scheduled</h3>
+        <p>When no study sessions exist, the dashboard will encourage the student to plan one.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 StudyFlow. Built for students who want better academic organization.</p>
+
+    <nav aria-label="Footer navigation">
+      <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="tasks.html">Tasks</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="settings.html">Settings</a></li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+</html>
