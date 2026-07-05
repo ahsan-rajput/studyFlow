@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Create your first StudyFlow semester during onboarding."
+  >
+
+  <title>Create First Semester | StudyFlow</title>
+</head>
+
+<body>
+  <header>
+    <nav aria-label="Main navigation">
+      <a href="index.html">StudyFlow</a>
+
+      <ul>
+        <li><a href="onboarding.html">Back to welcome</a></li>
+        <li><a href="dashboard.html">Skip to dashboard</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="semester-title">
+      <h1 id="semester-title">Create your first semester</h1>
+
+      <p>
+        Your semester helps StudyFlow organize courses, deadlines, study sessions,
+        and academic progress around a specific time period.
+      </p>
+
+      <form action="#" method="post">
+        <div>
+          <label for="semester-name">Semester name</label>
+          <input
+            type="text"
+            id="semester-name"
+            name="semester-name"
+            placeholder="Fall 2026"
+            required
+          >
+        </div>
+
+        <div>
+          <label for="start-date">Start date</label>
+          <input
+            type="date"
+            id="start-date"
+            name="start-date"
+            required
+          >
+        </div>
+
+        <div>
+          <label for="end-date">End date</label>
+          <input
+            type="date"
+            id="end-date"
+            name="end-date"
+            required
+          >
+        </div>
+
+        <div>
+          <label for="semester-status">Semester status</label>
+          <select id="semester-status" name="semester-status" required>
+            <option value="">Select status</option>
+            <option value="current">Current semester</option>
+            <option value="upcoming">Upcoming semester</option>
+            <option value="past">Past semester</option>
+          </select>
+        </div>
+
+        <div>
+          <input
+            type="checkbox"
+            id="active-semester"
+            name="active-semester"
+          >
+          <label for="active-semester">Set this as my active semester</label>
+        </div>
+
+        <button type="submit">Save semester</button>
+      </form>
+
+      <p>
+        Next step:
+        <a href="onboarding-course.html">Add your first course</a>
+      </p>
+    </section>
+
+    <section aria-labelledby="semester-help-title">
+      <h2 id="semester-help-title">Example semester details</h2>
+
+      <ul>
+        <li>Name: Fall 2026</li>
+        <li>Start date: August 24, 2026</li>
+        <li>End date: December 18, 2026</li>
+        <li>Status: Current semester</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 StudyFlow. Built for students who want better academic organization.</p>
+
+    <nav aria-label="Footer navigation">
+      <ul>
+        <li><a href="onboarding.html">Welcome</a></li>
+        <li><a href="onboarding-course.html">Next: add course</a></li>
+        <li><a href="dashboard.html">Skip to dashboard</a></li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+</html>
