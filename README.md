@@ -4,12 +4,13 @@ StudyFlow is a student productivity web application built step by step as a full
 
 ## Current Status
 
-Phase 1: HTML structure completed  
-Phase 1.5: Static HTML deployment in progress
+Phase 1 completed: HTML structure and static deployment.
+
+The project currently includes the main StudyFlow pages such as landing page, authentication pages, onboarding pages, dashboard, courses, tasks, notes, study planner, GPA progress, search, notifications, and settings.
 
 ## Live Demo
 
-Coming soon: GitHub Pages link
+https://ahsan-rajput.github.io/studyFlow/index.html
 
 ## Features in Current Version
 
