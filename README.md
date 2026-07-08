@@ -1,26 +1,42 @@
 # StudyFlow
 
-StudyFlow is a student productivity web application being built step by step as a full-stack learning project.
-
-The goal of StudyFlow is to help students organize semesters, courses, tasks, deadlines, notes, study sessions, GPA goals, notifications, search, and academic progress in one place.
-
-This project is being developed in phases:
-
-1. HTML
-2. CSS
-3. JavaScript
-4. React
-5. Backend
-6. Database
-7. Deployment
-
-The current focus is to build the project carefully and professionally, one layer at a time.
-
----
+StudyFlow is a student productivity web application built step by step as a full-stack learning project.
 
 ## Current Status
 
-Current phase:
+Phase 1: HTML structure completed  
+Phase 1.5: Static HTML deployment in progress
 
-```text
-Phase 1: HTML structure
+## Live Demo
+
+Coming soon: GitHub Pages link
+
+## Features in Current Version
+
+- Landing page
+- Login page
+- Signup page
+- Forgot password page
+- Onboarding pages
+- Dashboard page
+- Semester pages
+- Course pages
+- Task page
+- Notes page
+- Study planner page
+- GPA progress page
+- Search page
+- Notifications page
+- Settings page
+
+## Roadmap
+
+1. HTML
+2. Deployment checkpoint
+3. CSS
+4. JavaScript
+5. React
+6. Backend
+7. Database
+8. Full-stack deployment
+9. Final polish
