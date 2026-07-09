@@ -7,18 +7,25 @@
 
   <meta
     name="description"
-    content="Track GPA goals, course progress, academic performance, and semester progress in StudyFlow."
+    content="Track GPA goals, academic progress, course grades, and semester performance in StudyFlow."
   >
 
-  <title>GPA and Progress | StudyFlow</title>
+  <title>GPA Progress | StudyFlow</title>
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
-  <header>
-    <nav aria-label="Main navigation">
-      <a href="index.html">StudyFlow</a>
+  <header class="app-header">
+    <nav class="app-nav" aria-label="Main navigation">
+      <a class="brand" href="index.html">StudyFlow</a>
 
-      <ul>
+      <ul class="nav-list">
         <li><a href="dashboard.html">Dashboard</a></li>
         <li><a href="semesters.html">Semesters</a></li>
         <li><a href="courses.html">Courses</a></li>
@@ -29,148 +36,253 @@
         <li><a href="search.html">Search</a></li>
         <li><a href="notifications.html">Notifications</a></li>
         <li><a href="settings.html">Settings</a></li>
+        <li><a href="login.html">Log out</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section aria-labelledby="gpa-progress-title">
-      <h1 id="gpa-progress-title">GPA and progress</h1>
+  <main class="app-main">
+    <section class="page-header" aria-labelledby="gpa-title">
+      <div>
+        <p class="eyebrow">Academic progress</p>
+        <h1 id="gpa-title" class="page-title">GPA Progress</h1>
+        <p class="page-description">
+          Track your semester GPA goal, course performance, credit hours, and
+          academic progress in one focused view.
+        </p>
+      </div>
 
-      <p>
-        Track your GPA goal, course progress, completed work, and academic risk
-        areas for the current semester.
-      </p>
-
-      <a href="#gpa-goal-form">Update GPA goal</a>
+      <a class="btn btn-primary" href="#gpa-goal-form">Update GPA goal</a>
     </section>
 
-    <section aria-labelledby="gpa-summary-title">
-      <h2 id="gpa-summary-title">GPA summary</h2>
+    <section class="content-grid" aria-label="GPA overview">
+      <article class="card highlight-card">
+        <div class="card-header">
+          <div>
+            <p class="eyebrow">Semester target</p>
+            <h2 class="section-title">Fall 2026 GPA goal</h2>
+          </div>
 
-      <ul>
-        <li>Current GPA: 3.40</li>
-        <li>Target GPA: 3.70</li>
-        <li>GPA scale: 4.0</li>
-        <li>Status: On track with consistent work completion</li>
-      </ul>
-    </section>
-
-    <section aria-labelledby="course-progress-title">
-      <h2 id="course-progress-title">Course progress</h2>
-
-      <article>
-        <h3>Biology 101</h3>
-        <p>Credit hours: 3</p>
-        <p>Current grade: B+</p>
-        <p>Target grade: A</p>
-        <p>Task completion: 70%</p>
-      </article>
-
-      <article>
-        <h3>Calculus I</h3>
-        <p>Credit hours: 4</p>
-        <p>Current grade: B</p>
-        <p>Target grade: A-</p>
-        <p>Task completion: 65%</p>
-      </article>
-
-      <article>
-        <h3>Computer Science 101</h3>
-        <p>Credit hours: 3</p>
-        <p>Current grade: A-</p>
-        <p>Target grade: A</p>
-        <p>Task completion: 80%</p>
-      </article>
-    </section>
-
-    <section aria-labelledby="progress-alerts-title">
-      <h2 id="progress-alerts-title">Progress alerts</h2>
-
-      <ul>
-        <li>Calculus I needs attention because task completion is below the semester average.</li>
-        <li>Biology 101 has a high-priority lab task due today.</li>
-        <li>Computer Science 101 is close to the target grade but has a quiz coming soon.</li>
-      </ul>
-    </section>
-
-    <section aria-labelledby="semester-progress-title">
-      <h2 id="semester-progress-title">Semester progress</h2>
-
-      <ul>
-        <li>Total tasks: 22</li>
-        <li>Completed tasks: 14</li>
-        <li>Open tasks: 8</li>
-        <li>Overdue tasks: 2</li>
-        <li>Study sessions completed: 5</li>
-      </ul>
-    </section>
-
-    <section aria-labelledby="gpa-goal-title" id="gpa-goal-form">
-      <h2 id="gpa-goal-title">Update GPA goal</h2>
-
-      <form action="#" method="post">
-        <div>
-          <label for="current-gpa">Current GPA</label>
-          <input
-            type="number"
-            id="current-gpa"
-            name="current-gpa"
-            min="0"
-            max="4"
-            step="0.01"
-            value="3.40"
-          >
+          <span class="badge badge-success">3.70 target</span>
         </div>
 
-        <div>
-          <label for="target-gpa">Target GPA</label>
-          <input
-            type="number"
-            id="target-gpa"
-            name="target-gpa"
-            min="0"
-            max="4"
-            step="0.01"
-            value="3.70"
-          >
+        <p class="card-text">
+          Your current estimate is close to your target. Keep course grades
+          updated so this progress view becomes accurate in later phases.
+        </p>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-number">3.70</span>
+            <span class="stat-label">Target GPA</span>
+          </div>
+
+          <div class="stat-card">
+            <span class="stat-number">3.58</span>
+            <span class="stat-label">Estimate</span>
+          </div>
+
+          <div class="stat-card">
+            <span class="stat-number">13</span>
+            <span class="stat-label">Credit hours</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-header">
+          <div>
+            <p class="eyebrow">Goal progress</p>
+            <h2 class="section-title">Academic momentum</h2>
+          </div>
+
+          <span class="badge badge-warning">Needs focus</span>
         </div>
 
-        <div>
-          <label for="gpa-scale">GPA scale</label>
-          <select id="gpa-scale" name="gpa-scale">
-            <option value="">Select GPA scale</option>
-            <option value="4.0" selected>4.0 scale</option>
-            <option value="5.0">5.0 scale</option>
-            <option value="percentage">Percentage</option>
-            <option value="other">Other</option>
-          </select>
+        <p class="card-text">
+          Biology and Calculus need the most attention to stay aligned with your
+          semester GPA goal.
+        </p>
+
+        <div class="progress-bar" aria-label="GPA goal progress">
+          <span style="width: 82%;"></span>
         </div>
 
+        <p class="muted-text">82% placeholder progress toward the GPA target.</p>
+      </article>
+    </section>
+
+    <section class="section-block" aria-labelledby="course-grades-title">
+      <div class="section-heading">
         <div>
-          <label for="goal-notes">Goal notes</label>
+          <p class="eyebrow">Course grades</p>
+          <h2 id="course-grades-title" class="section-title">Current course performance</h2>
+        </div>
+      </div>
+
+      <div class="card-grid">
+        <article class="card course-card">
+          <div class="card-header">
+            <h3>Biology 101</h3>
+            <span class="badge badge-warning">B+</span>
+          </div>
+
+          <p class="card-text">Target grade: A-</p>
+
+          <div class="progress-bar" aria-label="Biology grade progress">
+            <span style="width: 78%;"></span>
+          </div>
+
+          <p class="muted-text">Needs attention because of one overdue lab task.</p>
+        </article>
+
+        <article class="card course-card">
+          <div class="card-header">
+            <h3>Calculus I</h3>
+            <span class="badge badge-info">A-</span>
+          </div>
+
+          <p class="card-text">Target grade: A</p>
+
+          <div class="progress-bar" aria-label="Calculus grade progress">
+            <span style="width: 86%;"></span>
+          </div>
+
+          <p class="muted-text">Stable, but upcoming practice work matters.</p>
+        </article>
+
+        <article class="card course-card">
+          <div class="card-header">
+            <h3>Computer Science 101</h3>
+            <span class="badge badge-success">A</span>
+          </div>
+
+          <p class="card-text">Target grade: A</p>
+
+          <div class="progress-bar" aria-label="Computer science grade progress">
+            <span style="width: 93%;"></span>
+          </div>
+
+          <p class="muted-text">Strong progress with consistent quiz preparation.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-block" aria-labelledby="academic-insights-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Insights</p>
+          <h2 id="academic-insights-title" class="section-title">Academic recommendations</h2>
+        </div>
+      </div>
+
+      <div class="card-list">
+        <article class="card task-card">
+          <div class="card-header">
+            <h3>Protect Biology performance</h3>
+            <span class="badge badge-danger">High impact</span>
+          </div>
+
+          <p class="card-text">
+            Biology has an overdue lab task and a lower current estimate than your
+            target grade.
+          </p>
+        </article>
+
+        <article class="card task-card">
+          <div class="card-header">
+            <h3>Keep CS momentum</h3>
+            <span class="badge badge-success">On track</span>
+          </div>
+
+          <p class="card-text">
+            Computer Science is currently supporting your GPA goal. Maintain the
+            study pattern before quizzes.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-block" aria-labelledby="gpa-goal-title" id="gpa-goal-form">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Goal setup</p>
+          <h2 id="gpa-goal-title" class="section-title">Update GPA goal</h2>
+        </div>
+      </div>
+
+      <form class="card form-card" action="#" method="post">
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label" for="target-gpa">Target GPA</label>
+            <input
+              class="form-input"
+              type="number"
+              id="target-gpa"
+              name="target-gpa"
+              min="0"
+              max="4"
+              step="0.01"
+              value="3.70"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="current-estimate">Current estimate</label>
+            <input
+              class="form-input"
+              type="number"
+              id="current-estimate"
+              name="current-estimate"
+              min="0"
+              max="4"
+              step="0.01"
+              value="3.58"
+            >
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="gpa-semester">Semester</label>
+            <select class="form-input" id="gpa-semester" name="gpa-semester" required>
+              <option value="fall-2026">Fall 2026</option>
+              <option value="spring-2027">Spring 2027</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="gpa-notes">Goal notes</label>
           <textarea
-            id="goal-notes"
-            name="goal-notes"
-            rows="5"
-          >Focus on improving consistency before exams.</textarea>
+            class="form-input"
+            id="gpa-notes"
+            name="gpa-notes"
+            rows="4"
+            placeholder="Add notes about your GPA goal or academic strategy."
+          ></textarea>
         </div>
 
-        <button type="submit">Save GPA goal</button>
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit">Save GPA goal</button>
+          <a class="btn btn-secondary" href="dashboard.html">Cancel</a>
+        </div>
       </form>
     </section>
 
-    <section aria-labelledby="empty-progress-title">
-      <h2 id="empty-progress-title">Empty state example</h2>
+    <section class="empty-state" aria-labelledby="empty-gpa-title">
+      <p class="eyebrow">Empty state example</p>
+      <h2 id="empty-gpa-title">No GPA goal set</h2>
 
       <p>
-        No GPA goal set yet. Add a GPA goal to help StudyFlow show progress and
-        academic focus areas.
+        Set a GPA goal so StudyFlow can help connect your courses, tasks, and
+        study habits to academic progress.
       </p>
+
+      <a class="btn btn-primary" href="#gpa-goal-form">Set GPA goal</a>
     </section>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <p>&copy; 2026 StudyFlow. Built for students who want better academic organization.</p>
   </footer>
 </body>
