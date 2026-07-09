@@ -2,141 +2,105 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="description"
-    content="Create a StudyFlow account to organize semesters, courses, deadlines, notes, study sessions, and academic progress."
-  >
+  <title>Sign Up | StudyFlow</title>
+  <meta name="description" content="Create a StudyFlow account to start organizing your courses, tasks, notes, deadlines, and academic goals.">
 
-  <title>Create Account | StudyFlow</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
-  <header>
-    <nav aria-label="Main navigation">
-      <a href="index.html">StudyFlow</a>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="login.html">Log in</a></li>
-      </ul>
-    </nav>
-  </header>
+  <main id="main-content" class="auth-page">
+    <section class="auth-card" aria-labelledby="signup-title">
+      <div class="auth-header">
+        <a class="brand" href="index.html" aria-label="StudyFlow home">
+          <span class="brand-mark">SF</span>
+          <span>StudyFlow</span>
+        </a>
 
-  <main>
-    <section aria-labelledby="signup-title">
-      <h1 id="signup-title">Create your StudyFlow account</h1>
+        <div class="stack-sm">
+          <h1 id="signup-title" class="auth-title">Create your account</h1>
+          <p class="auth-description">
+            Set up your academic workspace and start organizing your semester.
+          </p>
+        </div>
+      </div>
 
-      <p>
-        Start organizing your semester, courses, deadlines, notes, and study plans
-        in one academic workspace.
-      </p>
-
-      <form action="#" method="post">
-        <div>
-          <label for="full-name">Full name</label>
+      <form class="auth-form" action="#" method="post">
+        <div class="form-group">
+          <label class="form-label" for="name">Full name</label>
           <input
+            class="form-input"
             type="text"
-            id="full-name"
-            name="full-name"
+            id="name"
+            name="name"
+            placeholder="Your full name"
             autocomplete="name"
             required
           >
         </div>
 
-        <div>
-          <label for="email">Email address</label>
+        <div class="form-group">
+          <label class="form-label" for="email">Email address</label>
           <input
+            class="form-input"
             type="email"
             id="email"
             name="email"
+            placeholder="you@example.com"
             autocomplete="email"
             required
           >
         </div>
 
-        <div>
-          <label for="password">Password</label>
+        <div class="form-group">
+          <label class="form-label" for="password">Password</label>
           <input
+            class="form-input"
             type="password"
             id="password"
             name="password"
+            placeholder="Create a password"
             autocomplete="new-password"
-            minlength="8"
             required
           >
+          <p class="form-hint">Use a password you do not use on other websites.</p>
         </div>
 
-        <div>
-          <label for="confirm-password">Confirm password</label>
+        <div class="form-group">
+          <label class="form-label" for="confirm-password">Confirm password</label>
           <input
+            class="form-input"
             type="password"
             id="confirm-password"
             name="confirm-password"
+            placeholder="Re-enter your password"
             autocomplete="new-password"
-            minlength="8"
             required
           >
         </div>
 
-        <div>
-          <label for="academic-level">Academic level</label>
-          <select id="academic-level" name="academic-level" required>
-            <option value="">Select your academic level</option>
-            <option value="high-school">High school</option>
-            <option value="college">College</option>
-            <option value="university">University</option>
-            <option value="graduate">Graduate student</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-
-        <div>
-          <input
-            type="checkbox"
-            id="terms"
-            name="terms"
-            required
-          >
-          <label for="terms">
-            I agree to use StudyFlow as my academic planning workspace.
-          </label>
-        </div>
-
-        <button type="submit">Create account</button>
+        <button class="btn btn-primary btn-block" type="submit">
+          Create account
+        </button>
       </form>
 
-      <p>
+      <p class="auth-form-footer">
         Already have an account?
         <a href="login.html">Log in</a>
       </p>
-    </section>
 
-    <section aria-labelledby="after-signup-title">
-      <h2 id="after-signup-title">What happens after signup?</h2>
-
-      <ol>
-        <li>Welcome to StudyFlow.</li>
-        <li>Create your first semester.</li>
-        <li>Add your first course.</li>
-        <li>Add your first deadline.</li>
-        <li>Start using your dashboard to manage academic priorities.</li>
-      </ol>
+      <p class="auth-meta">
+        Static prototype only. Account creation will become functional in a later phase.
+      </p>
     </section>
   </main>
-
-  <footer>
-    <p>&copy; 2026 StudyFlow. Built for students who want better academic organization.</p>
-
-    <nav aria-label="Footer navigation">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="login.html">Log in</a></li>
-        <li><a href="forgot-password.html">Forgot password</a></li>
-      </ul>
-    </nav>
-  </footer>
 </body>
 </html>

@@ -2,166 +2,285 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta
-    name="description"
-    content="StudyFlow is a student productivity app for managing semesters, courses, tasks, notes, study sessions, and academic progress."
-  >
   <title>StudyFlow | Student Productivity Dashboard</title>
+  <meta name="description" content="StudyFlow helps students manage courses, tasks, notes, study sessions, deadlines, and academic goals in one organized place.">
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
-
 <body>
-  <header>
-    <nav aria-label="Main navigation">
-      <a href="index.html">StudyFlow</a>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-      <ul>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#how-it-works">How it works</a></li>
-        <li><a href="#student-problems">Student problems</a></li>
-        <li><a href="login.html">Log in</a></li>
-        <li><a href="signup.html">Sign up</a></li>
+  <header class="site-header">
+    <nav class="site-nav container" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="StudyFlow home">
+        <span class="brand-mark">SF</span>
+        <span>StudyFlow</span>
+      </a>
+
+      <ul class="nav-list">
+        <li><a class="nav-link" href="#features">Features</a></li>
+        <li><a class="nav-link" href="#problems">Student problems</a></li>
+        <li><a class="nav-link" href="#how-it-works">How it works</a></li>
       </ul>
+
+      <div class="nav-actions">
+        <a class="btn btn-ghost" href="login.html">Log in</a>
+        <a class="btn btn-primary" href="signup.html">Sign up</a>
+      </div>
     </nav>
   </header>
 
-  <main>
-    <section aria-labelledby="hero-title">
-      <h1 id="hero-title">Stay organized throughout your semester with StudyFlow</h1>
+  <main id="main-content" class="page-main">
+    <section class="hero">
+      <div class="hero-grid container">
+        <div class="hero-content">
+          <p class="eyebrow">Academic command center</p>
 
-      <p>
-        StudyFlow helps students manage courses, deadlines, notes, study sessions,
-        GPA goals, and academic priorities in one organized place.
-      </p>
+          <h1 class="hero-title">
+            Stay organized throughout your semester with StudyFlow.
+          </h1>
 
-      <a href="signup.html">Get started</a>
-      <a href="login.html">I already have an account</a>
+          <p class="hero-description">
+            StudyFlow helps students manage courses, deadlines, notes, study sessions, GPA goals, and academic priorities in one organized place.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-lg" href="signup.html">Get started</a>
+            <a class="btn btn-secondary btn-lg" href="login.html">I already have an account</a>
+          </div>
+        </div>
+
+        <aside class="hero-panel" aria-label="StudyFlow dashboard preview">
+          <div class="hero-panel-header">
+            <div>
+              <h2 class="hero-panel-title">Today’s focus</h2>
+              <p class="hero-panel-subtitle">A quick preview of what StudyFlow will help you track.</p>
+            </div>
+            <span class="badge badge-primary">Preview</span>
+          </div>
+
+          <div class="stack">
+            <article class="list-item surface">
+              <div>
+                <h3 class="item-title">Biology lab report</h3>
+                <p class="item-meta">Due today · High priority</p>
+              </div>
+              <span class="badge badge-danger">Urgent</span>
+            </article>
+
+            <article class="list-item surface">
+              <div>
+                <h3 class="item-title">Calculus quiz review</h3>
+                <p class="item-meta">Tomorrow · Study session needed</p>
+              </div>
+              <span class="badge badge-warning">Upcoming</span>
+            </article>
+
+            <article class="list-item surface">
+              <div>
+                <h3 class="item-title">English notes</h3>
+                <p class="item-meta">Recently updated · Course notes</p>
+              </div>
+              <span class="badge badge-success">Updated</span>
+            </article>
+          </div>
+        </aside>
+      </div>
     </section>
 
-    <section id="student-problems" aria-labelledby="problems-title">
-      <h2 id="problems-title">Built for real student problems</h2>
+    <section id="problems" class="section">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Why StudyFlow exists</p>
+          <h2 class="section-title">Built for real student problems</h2>
+          <p class="section-description">
+            Academic work becomes difficult to manage when assignments, notes, deadlines, and study plans are spread across too many places.
+          </p>
+        </div>
 
-      <p>
-        Students often lose track of assignments, exams, notes, and study plans
-        because academic work is spread across different apps, notebooks, and reminders.
-      </p>
+        <div class="card-grid">
+          <article class="card">
+            <div class="card-body">
+              <h3 class="card-title">Missed deadlines</h3>
+              <p class="card-description">
+                Important assignments and exams are easy to miss when multiple courses become busy at the same time.
+              </p>
+            </div>
+          </article>
 
-      <ul>
-        <li>Deadlines are easy to miss when courses become busy.</li>
-        <li>Notes can become hard to find later in the semester.</li>
-        <li>Students may not know which course needs the most attention.</li>
-        <li>Study plans often fail when they are not connected to actual tasks.</li>
-      </ul>
+          <article class="card">
+            <div class="card-body">
+              <h3 class="card-title">Scattered notes</h3>
+              <p class="card-description">
+                Course notes can become hard to find later in the semester when they are not connected to the right class.
+              </p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <h3 class="card-title">Unclear priorities</h3>
+              <p class="card-description">
+                Students need a simple way to understand which course, task, or deadline deserves attention first.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <section id="features" aria-labelledby="features-title">
-      <h2 id="features-title">What StudyFlow will help you manage</h2>
+    <section id="features" class="section">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Core features</p>
+          <h2 class="section-title">What StudyFlow will help you manage</h2>
+          <p class="section-description">
+            StudyFlow is being built step by step into a focused workspace for academic planning and progress.
+          </p>
+        </div>
 
-      <article>
-        <h3>Semesters</h3>
-        <p>
-          Organize your academic year by creating semesters and tracking which one
-          is currently active.
-        </p>
-      </article>
+        <div class="feature-grid">
+          <article class="card">
+            <div class="card-body">
+              <span class="badge badge-primary">Semesters</span>
+              <h3 class="card-title">Semester planning</h3>
+              <p class="card-description">
+                Organize your academic year and keep track of your active semester.
+              </p>
+            </div>
+          </article>
 
-      <article>
-        <h3>Courses</h3>
-        <p>
-          Keep course details, instructors, schedules, credit hours, grades, and
-          related tasks in one place.
-        </p>
-      </article>
+          <article class="card">
+            <div class="card-body">
+              <span class="badge badge-accent">Courses</span>
+              <h3 class="card-title">Course management</h3>
+              <p class="card-description">
+                Store course details, instructors, schedules, credit hours, and grade goals.
+              </p>
+            </div>
+          </article>
 
-      <article>
-        <h3>Tasks and deadlines</h3>
-        <p>
-          Track assignments, quizzes, exams, projects, readings, labs, and custom
-          academic tasks.
-        </p>
-      </article>
+          <article class="card">
+            <div class="card-body">
+              <span class="badge badge-warning">Tasks</span>
+              <h3 class="card-title">Tasks and deadlines</h3>
+              <p class="card-description">
+                Track assignments, quizzes, exams, projects, readings, labs, and custom tasks.
+              </p>
+            </div>
+          </article>
 
-      <article>
-        <h3>Notes</h3>
-        <p>
-          Create course-specific notes and mark important information for quick
-          review later.
-        </p>
-      </article>
+          <article class="card">
+            <div class="card-body">
+              <span class="badge badge-info">Notes</span>
+              <h3 class="card-title">Course notes</h3>
+              <p class="card-description">
+                Create course-specific notes and mark important information for review.
+              </p>
+            </div>
+          </article>
 
-      <article>
-        <h3>Study planner</h3>
-        <p>
-          Plan study sessions and connect them to courses or upcoming deadlines.
-        </p>
-      </article>
+          <article class="card">
+            <div class="card-body">
+              <span class="badge badge-success">Planning</span>
+              <h3 class="card-title">Study planner</h3>
+              <p class="card-description">
+                Plan study sessions and connect them to courses or upcoming deadlines.
+              </p>
+            </div>
+          </article>
 
-      <article>
-        <h3>Dashboard</h3>
-        <p>
-          View today’s tasks, upcoming deadlines, overdue work, high-priority tasks,
-          and courses needing attention.
-        </p>
-      </article>
+          <article class="card">
+            <div class="card-body">
+              <span class="badge badge-muted">Dashboard</span>
+              <h3 class="card-title">Academic overview</h3>
+              <p class="card-description">
+                See today’s tasks, upcoming deadlines, overdue work, and courses needing attention.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <section id="how-it-works" aria-labelledby="how-it-works-title">
-      <h2 id="how-it-works-title">How StudyFlow will work</h2>
+    <section id="how-it-works" class="section">
+      <div class="container split-grid">
+        <div>
+          <p class="eyebrow">Simple workflow</p>
+          <h2>How StudyFlow will work</h2>
+          <p>
+            The product starts with a guided setup and grows into a dashboard that helps students decide what to work on next.
+          </p>
+        </div>
 
-      <ol>
-        <li>Create your account.</li>
-        <li>Set up your current semester.</li>
-        <li>Add your courses.</li>
-        <li>Add your deadlines, notes, and study sessions.</li>
-        <li>Use your dashboard to decide what needs attention first.</li>
-      </ol>
+        <ol class="list-panel">
+          <li class="list-item">
+            <div>
+              <h3 class="item-title">Create your account</h3>
+              <p class="item-meta">Start with a simple student profile.</p>
+            </div>
+          </li>
+
+          <li class="list-item">
+            <div>
+              <h3 class="item-title">Set up your semester</h3>
+              <p class="item-meta">Add your active academic term.</p>
+            </div>
+          </li>
+
+          <li class="list-item">
+            <div>
+              <h3 class="item-title">Add courses and deadlines</h3>
+              <p class="item-meta">Connect your academic work to the right course.</p>
+            </div>
+          </li>
+
+          <li class="list-item">
+            <div>
+              <h3 class="item-title">Use your dashboard</h3>
+              <p class="item-meta">Focus on the tasks that need attention first.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
     </section>
 
-    <section aria-labelledby="dashboard-preview-title">
-      <h2 id="dashboard-preview-title">Your future academic command center</h2>
+    <section class="section">
+      <div class="container">
+        <div class="cta-section">
+          <div class="split-grid">
+            <div>
+              <h2>Start building better study habits</h2>
+              <p>
+                StudyFlow is designed to help students move from scattered academic planning to a clear, organized system.
+              </p>
+            </div>
 
-      <p>
-        The StudyFlow dashboard will show a clear overview of your academic workload
-        so you can focus on the right task at the right time.
-      </p>
-
-      <ul>
-        <li>Today’s tasks</li>
-        <li>Upcoming deadlines</li>
-        <li>Overdue tasks</li>
-        <li>High-priority work</li>
-        <li>Courses needing attention</li>
-        <li>Recently updated notes</li>
-        <li>Study sessions for today</li>
-        <li>GPA goal progress</li>
-      </ul>
-    </section>
-
-    <section aria-labelledby="cta-title">
-      <h2 id="cta-title">Start building better study habits</h2>
-
-      <p>
-        StudyFlow is designed to help students move from scattered academic planning
-        to a clear, organized system.
-      </p>
-
-      <a href="signup.html">Create your StudyFlow account</a>
+            <div class="cluster">
+              <a class="btn btn-secondary btn-lg" href="signup.html">Create your account</a>
+              <a class="btn btn-ghost btn-lg" href="login.html">Log in</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2026 StudyFlow. Built for students who want better academic organization.</p>
+  <footer class="site-footer">
+    <div class="footer-content container">
+      <p>© 2026 StudyFlow. Built for students who want better academic organization.</p>
 
-    <nav aria-label="Footer navigation">
-      <ul>
+      <ul class="footer-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="login.html">Log in</a></li>
         <li><a href="signup.html">Sign up</a></li>
         <li><a href="forgot-password.html">Forgot password</a></li>
       </ul>
-    </nav>
+    </div>
   </footer>
 </body>
 </html>
