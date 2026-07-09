@@ -7,18 +7,25 @@
 
   <meta
     name="description"
-    content="View StudyFlow notifications for deadlines, overdue tasks, study sessions, and academic alerts."
+    content="View academic notifications, reminders, overdue alerts, and deadline updates in StudyFlow."
   >
 
   <title>Notifications | StudyFlow</title>
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
-  <header>
-    <nav aria-label="Main navigation">
-      <a href="index.html">StudyFlow</a>
+  <header class="app-header">
+    <nav class="app-nav" aria-label="Main navigation">
+      <a class="brand" href="index.html">StudyFlow</a>
 
-      <ul>
+      <ul class="nav-list">
         <li><a href="dashboard.html">Dashboard</a></li>
         <li><a href="semesters.html">Semesters</a></li>
         <li><a href="courses.html">Courses</a></li>
@@ -29,102 +36,225 @@
         <li><a href="search.html">Search</a></li>
         <li><a href="notifications.html" aria-current="page">Notifications</a></li>
         <li><a href="settings.html">Settings</a></li>
+        <li><a href="login.html">Log out</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section aria-labelledby="notifications-title">
-      <h1 id="notifications-title">Notifications</h1>
+  <main class="app-main">
+    <section class="page-header" aria-labelledby="notifications-title">
+      <div>
+        <p class="eyebrow">Academic alerts</p>
+        <h1 id="notifications-title" class="page-title">Notifications</h1>
+        <p class="page-description">
+          Review deadline reminders, overdue task alerts, study session prompts,
+          and academic progress updates.
+        </p>
+      </div>
 
-      <p>
-        Review deadline reminders, overdue alerts, study session reminders, and
-        academic recommendations.
-      </p>
-
-      <a href="settings.html#notification-preferences">Manage notification preferences</a>
+      <a class="btn btn-primary" href="#notification-preferences-form">Notification settings</a>
     </section>
 
-    <section aria-labelledby="unread-notifications-title">
-      <h2 id="unread-notifications-title">Unread notifications</h2>
+    <section class="content-grid" aria-label="Notification overview">
+      <article class="card highlight-card">
+        <div class="card-header">
+          <div>
+            <p class="eyebrow">Today</p>
+            <h2 class="section-title">Important alerts</h2>
+          </div>
 
-      <article>
-        <h3>Biology lab notes are due today</h3>
-        <p>Type: Deadline reminder</p>
-        <p>Course: Biology 101</p>
-        <p>Status: Unread</p>
-      </article>
-
-      <article>
-        <h3>Chemistry worksheet is overdue</h3>
-        <p>Type: Overdue task alert</p>
-        <p>Course: Chemistry 101</p>
-        <p>Status: Unread</p>
-      </article>
-
-      <article>
-        <h3>Calculus review session starts this evening</h3>
-        <p>Type: Study session reminder</p>
-        <p>Course: Calculus I</p>
-        <p>Status: Unread</p>
-      </article>
-    </section>
-
-    <section aria-labelledby="read-notifications-title">
-      <h2 id="read-notifications-title">Read notifications</h2>
-
-      <article>
-        <h3>Computer science quiz is coming soon</h3>
-        <p>Type: Upcoming deadline</p>
-        <p>Course: Computer Science 101</p>
-        <p>Status: Read</p>
-      </article>
-
-      <article>
-        <h3>You completed a study session</h3>
-        <p>Type: Study progress update</p>
-        <p>Course: Biology 101</p>
-        <p>Status: Read</p>
-      </article>
-    </section>
-
-    <section aria-labelledby="notification-actions-title">
-      <h2 id="notification-actions-title">Notification actions</h2>
-
-      <form action="#" method="post">
-        <div>
-          <input
-            type="checkbox"
-            id="mark-all-read"
-            name="mark-all-read"
-          >
-          <label for="mark-all-read">Mark all notifications as read</label>
+          <span class="badge badge-danger">2 urgent</span>
         </div>
 
-        <div>
-          <input
-            type="checkbox"
-            id="clear-read"
-            name="clear-read"
-          >
-          <label for="clear-read">Clear read notifications</label>
+        <p class="card-text">
+          You have overdue work and upcoming deadlines that need attention.
+          In later phases, these alerts will be generated from your real task data.
+        </p>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-number">2</span>
+            <span class="stat-label">Overdue</span>
+          </div>
+
+          <div class="stat-card">
+            <span class="stat-number">3</span>
+            <span class="stat-label">Due soon</span>
+          </div>
+
+          <div class="stat-card">
+            <span class="stat-number">1</span>
+            <span class="stat-label">Study reminder</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-header">
+          <div>
+            <p class="eyebrow">Reminder health</p>
+            <h2 class="section-title">Alert coverage</h2>
+          </div>
+
+          <span class="badge badge-success">Enabled</span>
         </div>
 
-        <button type="submit">Apply notification action</button>
+        <p class="card-text">
+          Reminder preferences are visually prepared here. Real notification logic
+          comes later after JavaScript and backend phases.
+        </p>
+
+        <div class="progress-bar" aria-label="Notification coverage">
+          <span style="width: 76%;"></span>
+        </div>
+
+        <p class="muted-text">76% placeholder notification coverage.</p>
+      </article>
+    </section>
+
+    <section class="section-block" aria-labelledby="notification-list-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Inbox</p>
+          <h2 id="notification-list-title" class="section-title">Recent notifications</h2>
+        </div>
+      </div>
+
+      <div class="card-list">
+        <article class="card notification-item">
+          <div class="card-header">
+            <div>
+              <h3>Biology lab notes are overdue</h3>
+              <p class="card-text">Biology 101 · Assignment</p>
+            </div>
+
+            <span class="badge badge-danger">Overdue</span>
+          </div>
+
+          <p class="card-text">
+            This task was due yesterday. Review it from the tasks page and update
+            the status when complete.
+          </p>
+        </article>
+
+        <article class="card notification-item">
+          <div class="card-header">
+            <div>
+              <h3>Computer science quiz due in 3 days</h3>
+              <p class="card-text">Computer Science 101 · Quiz</p>
+            </div>
+
+            <span class="badge badge-warning">Due soon</span>
+          </div>
+
+          <p class="card-text">
+            Schedule a study session and review loops, arrays, and conditionals.
+          </p>
+        </article>
+
+        <article class="card notification-item">
+          <div class="card-header">
+            <div>
+              <h3>Study session planned for today</h3>
+              <p class="card-text">Biology 101 · 45 minutes</p>
+            </div>
+
+            <span class="badge badge-info">Reminder</span>
+          </div>
+
+          <p class="card-text">
+            Biology lab review is planned for today. Use the session to prepare
+            your lab submission checklist.
+          </p>
+        </article>
+
+        <article class="card notification-item">
+          <div class="card-header">
+            <div>
+              <h3>GPA goal needs Biology focus</h3>
+              <p class="card-text">Academic progress</p>
+            </div>
+
+            <span class="badge badge-warning">Progress</span>
+          </div>
+
+          <p class="card-text">
+            Biology is currently below the target grade. Completing overdue work
+            can help protect your semester goal.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-block" aria-labelledby="notification-preferences-title" id="notification-preferences-form">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Preferences</p>
+          <h2 id="notification-preferences-title" class="section-title">Notification preferences</h2>
+        </div>
+      </div>
+
+      <form class="card form-card" action="#" method="post">
+        <div class="checkbox-group">
+          <input type="checkbox" id="deadline-reminders" name="deadline-reminders" checked>
+          <label for="deadline-reminders">Deadline reminders</label>
+        </div>
+
+        <div class="checkbox-group">
+          <input type="checkbox" id="overdue-alerts" name="overdue-alerts" checked>
+          <label for="overdue-alerts">Overdue task alerts</label>
+        </div>
+
+        <div class="checkbox-group">
+          <input type="checkbox" id="study-reminders" name="study-reminders" checked>
+          <label for="study-reminders">Study session reminders</label>
+        </div>
+
+        <div class="checkbox-group">
+          <input type="checkbox" id="gpa-alerts" name="gpa-alerts">
+          <label for="gpa-alerts">GPA progress alerts</label>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label" for="reminder-time">Default reminder time</label>
+            <select class="form-input" id="reminder-time" name="reminder-time">
+              <option value="same-day">Same day</option>
+              <option value="one-day">1 day before</option>
+              <option value="three-days">3 days before</option>
+              <option value="one-week">1 week before</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="notification-frequency">Notification frequency</label>
+            <select class="form-input" id="notification-frequency" name="notification-frequency">
+              <option value="important-only">Important only</option>
+              <option value="daily-summary">Daily summary</option>
+              <option value="all">All updates</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit">Save preferences</button>
+          <a class="btn btn-secondary" href="dashboard.html">Cancel</a>
+        </div>
       </form>
     </section>
 
-    <section aria-labelledby="empty-notifications-title">
-      <h2 id="empty-notifications-title">Empty state example</h2>
+    <section class="empty-state" aria-labelledby="empty-notifications-title">
+      <p class="eyebrow">Empty state example</p>
+      <h2 id="empty-notifications-title">No notifications</h2>
 
       <p>
-        No notifications yet. When deadlines, overdue tasks, or study sessions
-        need attention, StudyFlow will show alerts here.
+        You are all caught up. New reminders will appear here when deadlines,
+        overdue work, or planned study sessions need your attention.
       </p>
     </section>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <p>&copy; 2026 StudyFlow. Built for students who want better academic organization.</p>
   </footer>
 </body>

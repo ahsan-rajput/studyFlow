@@ -11,137 +11,264 @@
   >
 
   <title>Semester Detail | StudyFlow</title>
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
-  <header>
-    <nav aria-label="Main navigation">
-      <a href="index.html">StudyFlow</a>
+  <header class="app-header">
+    <nav class="app-nav" aria-label="Main navigation">
+      <a class="brand" href="index.html">StudyFlow</a>
 
-      <ul>
+      <ul class="nav-list">
         <li><a href="dashboard.html">Dashboard</a></li>
-        <li><a href="semesters.html">Semesters</a></li>
+        <li><a href="semesters.html" aria-current="page">Semesters</a></li>
         <li><a href="courses.html">Courses</a></li>
         <li><a href="tasks.html">Tasks</a></li>
         <li><a href="notes.html">Notes</a></li>
+        <li><a href="study-planner.html">Study planner</a></li>
+        <li><a href="gpa-progress.html">GPA/progress</a></li>
+        <li><a href="search.html">Search</a></li>
+        <li><a href="notifications.html">Notifications</a></li>
         <li><a href="settings.html">Settings</a></li>
+        <li><a href="login.html">Log out</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section aria-labelledby="semester-detail-title">
-      <h1 id="semester-detail-title">Fall 2026</h1>
+  <main class="app-main">
+    <section class="page-header" aria-labelledby="semester-detail-title">
+      <div>
+        <p class="eyebrow">Current semester</p>
+        <h1 id="semester-detail-title" class="page-title">Fall 2026</h1>
+        <p class="page-description">
+          August 24, 2026 - December 18, 2026. Track your courses,
+          deadlines, notes, study sessions, and GPA progress for this semester.
+        </p>
+      </div>
 
-      <p>Status: Current semester</p>
-      <p>Dates: August 24, 2026 - December 18, 2026</p>
-      <p>GPA goal: 3.70</p>
-
-      <a href="#edit-semester-form">Edit semester</a>
+      <a class="btn btn-primary" href="#edit-semester-form">Edit semester</a>
     </section>
 
-    <section aria-labelledby="semester-summary-title">
-      <h2 id="semester-summary-title">Semester summary</h2>
+    <section class="content-grid" aria-labelledby="semester-summary-title">
+      <article class="card highlight-card">
+        <div class="card-header">
+          <div>
+            <p class="eyebrow">Overview</p>
+            <h2 id="semester-summary-title" class="section-title">Semester summary</h2>
+          </div>
 
-      <ul>
-        <li>Total courses: 4</li>
-        <li>Open tasks: 8</li>
-        <li>Completed tasks: 14</li>
-        <li>Overdue tasks: 2</li>
-        <li>Study sessions this week: 3</li>
-      </ul>
-    </section>
-
-    <section aria-labelledby="semester-courses-title">
-      <h2 id="semester-courses-title">Courses in this semester</h2>
-
-      <article>
-        <h3><a href="course-detail.html">Biology 101</a></h3>
-        <p>Instructor: Dr. Green</p>
-        <p>Open tasks: 3</p>
-      </article>
-
-      <article>
-        <h3><a href="course-detail.html">Calculus I</a></h3>
-        <p>Instructor: Professor Lane</p>
-        <p>Open tasks: 2</p>
-      </article>
-
-      <article>
-        <h3><a href="course-detail.html">Computer Science 101</a></h3>
-        <p>Instructor: Dr. Patel</p>
-        <p>Open tasks: 3</p>
-      </article>
-    </section>
-
-    <section aria-labelledby="semester-deadlines-title">
-      <h2 id="semester-deadlines-title">Upcoming semester deadlines</h2>
-
-      <ul>
-        <li>Biology lab notes — due today</li>
-        <li>Computer science quiz — due in 3 days</li>
-        <li>English essay draft — due in 5 days</li>
-      </ul>
-    </section>
-
-    <section aria-labelledby="semester-notes-title">
-      <h2 id="semester-notes-title">Recently updated notes</h2>
-
-      <article>
-        <h3>Biology cell structure notes</h3>
-        <p>Updated today.</p>
-      </article>
-
-      <article>
-        <h3>Calculus derivative rules</h3>
-        <p>Updated yesterday.</p>
-      </article>
-    </section>
-
-    <section aria-labelledby="edit-semester-title" id="edit-semester-form">
-      <h2 id="edit-semester-title">Edit semester</h2>
-
-      <form action="#" method="post">
-        <div>
-          <label for="semester-name">Semester name</label>
-          <input
-            type="text"
-            id="semester-name"
-            name="semester-name"
-            value="Fall 2026"
-            required
-          >
+          <span class="badge badge-success">Current</span>
         </div>
 
-        <div>
-          <label for="start-date">Start date</label>
-          <input
-            type="date"
-            id="start-date"
-            name="start-date"
-          >
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-number">4</span>
+            <span class="stat-label">Courses</span>
+          </div>
+
+          <div class="stat-card">
+            <span class="stat-number">8</span>
+            <span class="stat-label">Open tasks</span>
+          </div>
+
+          <div class="stat-card">
+            <span class="stat-number">14</span>
+            <span class="stat-label">Completed</span>
+          </div>
+
+          <div class="stat-card">
+            <span class="stat-number">2</span>
+            <span class="stat-label">Overdue</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-header">
+          <div>
+            <p class="eyebrow">Academic goal</p>
+            <h2 class="section-title">GPA target</h2>
+          </div>
+
+          <span class="badge badge-info">3.70</span>
         </div>
 
-        <div>
-          <label for="end-date">End date</label>
-          <input
-            type="date"
-            id="end-date"
-            name="end-date"
-          >
+        <p class="card-text">
+          Keep your course grades and task progress updated so StudyFlow can
+          later calculate your academic progress more accurately.
+        </p>
+
+        <div class="progress-bar" aria-label="GPA goal progress">
+          <span style="width: 72%;"></span>
         </div>
 
+        <p class="muted-text">Progress placeholder for Phase 2 design.</p>
+      </article>
+    </section>
+
+    <section class="section-block" aria-labelledby="semester-courses-title">
+      <div class="section-heading">
         <div>
+          <p class="eyebrow">Courses</p>
+          <h2 id="semester-courses-title" class="section-title">Courses in this semester</h2>
+        </div>
+
+        <a class="btn btn-secondary" href="courses.html">View all courses</a>
+      </div>
+
+      <div class="card-grid">
+        <article class="card course-card">
+          <div class="card-header">
+            <h3><a href="course-detail.html">Biology 101</a></h3>
+            <span class="badge badge-warning">3 open tasks</span>
+          </div>
+
+          <p class="card-text">Instructor: Dr. Green</p>
+        </article>
+
+        <article class="card course-card">
+          <div class="card-header">
+            <h3><a href="course-detail.html">Calculus I</a></h3>
+            <span class="badge badge-info">2 open tasks</span>
+          </div>
+
+          <p class="card-text">Instructor: Professor Lane</p>
+        </article>
+
+        <article class="card course-card">
+          <div class="card-header">
+            <h3><a href="course-detail.html">Computer Science 101</a></h3>
+            <span class="badge badge-warning">3 open tasks</span>
+          </div>
+
+          <p class="card-text">Instructor: Dr. Patel</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-block" aria-labelledby="semester-deadlines-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Deadlines</p>
+          <h2 id="semester-deadlines-title" class="section-title">Upcoming semester deadlines</h2>
+        </div>
+
+        <a class="btn btn-secondary" href="tasks.html">View tasks</a>
+      </div>
+
+      <div class="card-list">
+        <article class="card task-card">
+          <div class="card-header">
+            <h3>Biology lab notes</h3>
+            <span class="badge badge-danger">Due today</span>
+          </div>
+          <p class="card-text">Biology 101</p>
+        </article>
+
+        <article class="card task-card">
+          <div class="card-header">
+            <h3>Computer science quiz</h3>
+            <span class="badge badge-warning">Due in 3 days</span>
+          </div>
+          <p class="card-text">Computer Science 101</p>
+        </article>
+
+        <article class="card task-card">
+          <div class="card-header">
+            <h3>English essay draft</h3>
+            <span class="badge badge-info">Due in 5 days</span>
+          </div>
+          <p class="card-text">English Composition</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-block" aria-labelledby="semester-notes-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Notes</p>
+          <h2 id="semester-notes-title" class="section-title">Recently updated notes</h2>
+        </div>
+
+        <a class="btn btn-secondary" href="notes.html">Open notes</a>
+      </div>
+
+      <div class="card-grid">
+        <article class="card note-card">
+          <h3>Biology cell structure notes</h3>
+          <p class="card-text">Updated today.</p>
+        </article>
+
+        <article class="card note-card">
+          <h3>Calculus derivative rules</h3>
+          <p class="card-text">Updated yesterday.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-block" aria-labelledby="edit-semester-title" id="edit-semester-form">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Manage semester</p>
+          <h2 id="edit-semester-title" class="section-title">Edit semester</h2>
+        </div>
+      </div>
+
+      <form class="card form-card" action="#" method="post">
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label" for="semester-name">Semester name</label>
+            <input
+              class="form-input"
+              type="text"
+              id="semester-name"
+              name="semester-name"
+              value="Fall 2026"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="start-date">Start date</label>
+            <input
+              class="form-input"
+              type="date"
+              id="start-date"
+              name="start-date"
+            >
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="end-date">End date</label>
+            <input
+              class="form-input"
+              type="date"
+              id="end-date"
+              name="end-date"
+            >
+          </div>
+        </div>
+
+        <div class="checkbox-group">
           <input type="checkbox" id="archive-semester" name="archive-semester">
           <label for="archive-semester">Archive this semester</label>
         </div>
 
-        <button type="submit">Update semester</button>
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit">Update semester</button>
+          <a class="btn btn-secondary" href="semesters.html">Back to semesters</a>
+        </div>
       </form>
     </section>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <p>&copy; 2026 StudyFlow. Built for students who want better academic organization.</p>
   </footer>
 </body>

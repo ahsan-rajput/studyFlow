@@ -7,18 +7,25 @@
 
   <meta
     name="description"
-    content="Create, organize, and search course notes in StudyFlow."
+    content="Create, organize, and review academic notes by course in StudyFlow."
   >
 
   <title>Notes | StudyFlow</title>
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
-  <header>
-    <nav aria-label="Main navigation">
-      <a href="index.html">StudyFlow</a>
+  <header class="app-header">
+    <nav class="app-nav" aria-label="Main navigation">
+      <a class="brand" href="index.html">StudyFlow</a>
 
-      <ul>
+      <ul class="nav-list">
         <li><a href="dashboard.html">Dashboard</a></li>
         <li><a href="semesters.html">Semesters</a></li>
         <li><a href="courses.html">Courses</a></li>
@@ -29,155 +36,285 @@
         <li><a href="search.html">Search</a></li>
         <li><a href="notifications.html">Notifications</a></li>
         <li><a href="settings.html">Settings</a></li>
+        <li><a href="login.html">Log out</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section aria-labelledby="notes-title">
-      <h1 id="notes-title">Notes</h1>
+  <main class="app-main">
+    <section class="page-header" aria-labelledby="notes-title">
+      <div>
+        <p class="eyebrow">Knowledge base</p>
+        <h1 id="notes-title" class="page-title">Notes</h1>
+        <p class="page-description">
+          Keep course notes organized, searchable, and connected to the classes
+          and tasks they support.
+        </p>
+      </div>
 
-      <p>
-        Keep course notes organized by class, importance, and topic so you can
-        find important academic information later.
-      </p>
-
-      <a href="#create-note-form">Create note</a>
+      <a class="btn btn-primary" href="#add-note-form">Add note</a>
     </section>
 
-    <section aria-labelledby="note-search-title">
-      <h2 id="note-search-title">Find notes</h2>
+    <section class="content-grid" aria-label="Notes overview">
+      <article class="card highlight-card">
+        <div class="card-header">
+          <div>
+            <p class="eyebrow">Library</p>
+            <h2 class="section-title">Your study notes</h2>
+          </div>
 
-      <form action="#" method="get">
-        <div>
-          <label for="note-search">Search notes</label>
-          <input
-            type="search"
-            id="note-search"
-            name="note-search"
-            placeholder="Search by title, content, or tag"
-          >
+          <span class="badge badge-success">12 notes</span>
         </div>
 
-        <div>
-          <label for="course-filter">Course</label>
-          <select id="course-filter" name="course-filter">
-            <option value="">All courses</option>
-            <option value="biology-101">Biology 101</option>
-            <option value="calculus-1">Calculus I</option>
-            <option value="cs-101">Computer Science 101</option>
-          </select>
+        <p class="card-text">
+          Notes are grouped by course so you can quickly review material before
+          quizzes, exams, labs, and project deadlines.
+        </p>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-number">12</span>
+            <span class="stat-label">Total notes</span>
+          </div>
+
+          <div class="stat-card">
+            <span class="stat-number">3</span>
+            <span class="stat-label">Important</span>
+          </div>
+
+          <div class="stat-card">
+            <span class="stat-number">4</span>
+            <span class="stat-label">Courses</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-header">
+          <div>
+            <p class="eyebrow">Recently updated</p>
+            <h2 class="section-title">Fresh material</h2>
+          </div>
+
+          <span class="badge badge-info">Today</span>
         </div>
 
-        <button type="submit">Search notes</button>
+        <p class="card-text">
+          Biology cell structure notes were updated today. In Phase 3, this
+          section will update from localStorage data.
+        </p>
+
+        <div class="progress-bar" aria-label="Notes organization progress">
+          <span style="width: 61%;"></span>
+        </div>
+
+        <p class="muted-text">Placeholder organization score for Phase 2.</p>
+      </article>
+    </section>
+
+    <section class="section-block" aria-labelledby="notes-filter-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Find notes</p>
+          <h2 id="notes-filter-title" class="section-title">Filter notes</h2>
+        </div>
+      </div>
+
+      <form class="card form-card" action="#" method="get">
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label" for="note-search">Search notes</label>
+            <input
+              class="form-input"
+              type="search"
+              id="note-search"
+              name="note-search"
+              placeholder="Search by title, topic, or tag"
+            >
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="note-course">Course</label>
+            <select class="form-input" id="note-course" name="note-course">
+              <option value="">All courses</option>
+              <option value="biology-101">Biology 101</option>
+              <option value="calculus-1">Calculus I</option>
+              <option value="cs-101">Computer Science 101</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="note-status">Status</label>
+            <select class="form-input" id="note-status" name="note-status">
+              <option value="">All notes</option>
+              <option value="important">Important</option>
+              <option value="recent">Recently updated</option>
+              <option value="archived">Archived</option>
+            </select>
+          </div>
+        </div>
       </form>
     </section>
 
-    <section aria-labelledby="important-notes-title">
-      <h2 id="important-notes-title">Important notes</h2>
+    <section class="section-block" aria-labelledby="notes-list-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Current notes</p>
+          <h2 id="notes-list-title" class="section-title">Note library</h2>
+        </div>
+      </div>
 
-      <article>
-        <h3>Biology cell structure notes</h3>
-        <p>Course: Biology 101</p>
-        <p>Important: Yes</p>
-        <p>Tags: cells, exam-review, lab</p>
-        <p>Updated today.</p>
-      </article>
+      <div class="card-grid">
+        <article class="card note-card">
+          <div class="card-header">
+            <h3>Biology cell structure notes</h3>
+            <span class="badge badge-warning">Important</span>
+          </div>
 
-      <article>
-        <h3>Calculus derivative rules</h3>
-        <p>Course: Calculus I</p>
-        <p>Important: Yes</p>
-        <p>Tags: derivatives, formulas</p>
-        <p>Updated yesterday.</p>
-      </article>
+          <p class="card-text">
+            Covers organelles, cell membrane, nucleus, cytoplasm, and lab review points.
+          </p>
+
+          <dl class="details-list">
+            <div>
+              <dt>Course</dt>
+              <dd>Biology 101</dd>
+            </div>
+            <div>
+              <dt>Updated</dt>
+              <dd>Today</dd>
+            </div>
+          </dl>
+        </article>
+
+        <article class="card note-card">
+          <div class="card-header">
+            <h3>Calculus derivative rules</h3>
+            <span class="badge badge-info">Review</span>
+          </div>
+
+          <p class="card-text">
+            Power rule, product rule, quotient rule, and chain rule examples.
+          </p>
+
+          <dl class="details-list">
+            <div>
+              <dt>Course</dt>
+              <dd>Calculus I</dd>
+            </div>
+            <div>
+              <dt>Updated</dt>
+              <dd>Yesterday</dd>
+            </div>
+          </dl>
+        </article>
+
+        <article class="card note-card">
+          <div class="card-header">
+            <h3>Programming fundamentals</h3>
+            <span class="badge badge-success">Active</span>
+          </div>
+
+          <p class="card-text">
+            Variables, conditionals, loops, functions, arrays, and debugging notes.
+          </p>
+
+          <dl class="details-list">
+            <div>
+              <dt>Course</dt>
+              <dd>Computer Science 101</dd>
+            </div>
+            <div>
+              <dt>Updated</dt>
+              <dd>2 days ago</dd>
+            </div>
+          </dl>
+        </article>
+      </div>
     </section>
 
-    <section aria-labelledby="all-notes-title">
-      <h2 id="all-notes-title">All notes</h2>
-
-      <article>
-        <h3>Lab safety notes</h3>
-        <p>Course: Biology 101</p>
-        <p>Important: No</p>
-        <p>Updated last week.</p>
-      </article>
-
-      <article>
-        <h3>Programming basics</h3>
-        <p>Course: Computer Science 101</p>
-        <p>Important: No</p>
-        <p>Updated 3 days ago.</p>
-      </article>
-    </section>
-
-    <section aria-labelledby="create-note-title" id="create-note-form">
-      <h2 id="create-note-title">Create note</h2>
-
-      <form action="#" method="post">
+    <section class="section-block" aria-labelledby="add-note-title" id="add-note-form">
+      <div class="section-heading">
         <div>
-          <label for="note-title">Note title</label>
-          <input
-            type="text"
-            id="note-title"
-            name="note-title"
-            required
-          >
+          <p class="eyebrow">New note</p>
+          <h2 id="add-note-title" class="section-title">Add note</h2>
+        </div>
+      </div>
+
+      <form class="card form-card" action="#" method="post">
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label" for="note-title">Note title</label>
+            <input
+              class="form-input"
+              type="text"
+              id="note-title"
+              name="note-title"
+              placeholder="Biology cell structure notes"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="note-course-select">Course</label>
+            <select class="form-input" id="note-course-select" name="note-course-select" required>
+              <option value="">Select course</option>
+              <option value="biology-101">Biology 101</option>
+              <option value="calculus-1">Calculus I</option>
+              <option value="cs-101">Computer Science 101</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="note-tags">Tags</label>
+            <input
+              class="form-input"
+              type="text"
+              id="note-tags"
+              name="note-tags"
+              placeholder="exam, lab, chapter-4"
+            >
+          </div>
         </div>
 
-        <div>
-          <label for="note-course">Course</label>
-          <select id="note-course" name="note-course" required>
-            <option value="">Select course</option>
-            <option value="biology-101">Biology 101</option>
-            <option value="calculus-1">Calculus I</option>
-            <option value="cs-101">Computer Science 101</option>
-          </select>
-        </div>
-
-        <div>
-          <label for="note-tags">Tags</label>
-          <input
-            type="text"
-            id="note-tags"
-            name="note-tags"
-            placeholder="exam-review, formulas, lab"
-          >
-        </div>
-
-        <div>
-          <input
-            type="checkbox"
-            id="important-note"
-            name="important-note"
-          >
-          <label for="important-note">Mark as important</label>
-        </div>
-
-        <div>
-          <label for="note-content">Note content</label>
+        <div class="form-group">
+          <label class="form-label" for="note-content">Note content</label>
           <textarea
+            class="form-input"
             id="note-content"
             name="note-content"
-            rows="8"
+            rows="7"
+            placeholder="Write your note content here."
             required
           ></textarea>
         </div>
 
-        <button type="submit">Save note</button>
+        <div class="checkbox-group">
+          <input type="checkbox" id="important-note" name="important-note">
+          <label for="important-note">Mark as important</label>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit">Save note</button>
+          <a class="btn btn-secondary" href="dashboard.html">Cancel</a>
+        </div>
       </form>
     </section>
 
-    <section aria-labelledby="empty-notes-title">
-      <h2 id="empty-notes-title">Empty state example</h2>
+    <section class="empty-state" aria-labelledby="empty-notes-title">
+      <p class="eyebrow">Empty state example</p>
+      <h2 id="empty-notes-title">No notes found</h2>
 
       <p>
-        No notes found. Create a note or adjust your search filters.
+        Add your first course note so StudyFlow can help you review material,
+        connect notes to courses, and search your academic knowledge later.
       </p>
+
+      <a class="btn btn-primary" href="#add-note-form">Add first note</a>
     </section>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <p>&copy; 2026 StudyFlow. Built for students who want better academic organization.</p>
   </footer>
 </body>

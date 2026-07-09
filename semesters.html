@@ -11,14 +11,21 @@
   >
 
   <title>Semesters | StudyFlow</title>
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
-  <header>
-    <nav aria-label="Main navigation">
-      <a href="index.html">StudyFlow</a>
+  <header class="app-header">
+    <nav class="app-nav" aria-label="Main navigation">
+      <a class="brand" href="index.html">StudyFlow</a>
 
-      <ul>
+      <ul class="nav-list">
         <li><a href="dashboard.html">Dashboard</a></li>
         <li><a href="semesters.html" aria-current="page">Semesters</a></li>
         <li><a href="courses.html">Courses</a></li>
@@ -34,117 +41,230 @@
     </nav>
   </header>
 
-  <main>
-    <section aria-labelledby="semesters-title">
-      <h1 id="semesters-title">Semesters</h1>
+  <main class="app-main">
+    <section class="page-header" aria-labelledby="semesters-title">
+      <div>
+        <p class="eyebrow">Academic planning</p>
+        <h1 id="semesters-title" class="page-title">Semesters</h1>
+        <p class="page-description">
+          Organize your academic work by semester. Track courses, tasks,
+          deadlines, notes, study sessions, and GPA goals in one place.
+        </p>
+      </div>
 
-      <p>
-        Organize your academic work by semester. Each semester can contain courses,
-        tasks, deadlines, notes, study sessions, and GPA goals.
-      </p>
-
-      <a href="#create-semester-form">Create new semester</a>
+      <a class="btn btn-primary" href="#create-semester-form">Create new semester</a>
     </section>
 
-    <section aria-labelledby="active-semester-title">
-      <h2 id="active-semester-title">Active semester</h2>
+    <section class="content-grid" aria-label="Semester overview">
+      <article class="card highlight-card">
+        <div class="card-header">
+          <div>
+            <p class="eyebrow">Active semester</p>
+            <h2 class="section-title">
+              <a href="semester-detail.html">Fall 2026</a>
+            </h2>
+          </div>
 
-      <article>
-        <h3><a href="semester-detail.html">Fall 2026</a></h3>
-        <p>Status: Current semester</p>
-        <p>Dates: August 24, 2026 - December 18, 2026</p>
-        <p>Courses: 4</p>
-        <p>Open tasks: 8</p>
+          <span class="badge badge-success">Current</span>
+        </div>
+
+        <p class="card-text">
+          August 24, 2026 - December 18, 2026
+        </p>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-number">4</span>
+            <span class="stat-label">Courses</span>
+          </div>
+
+          <div class="stat-card">
+            <span class="stat-number">8</span>
+            <span class="stat-label">Open tasks</span>
+          </div>
+
+          <div class="stat-card">
+            <span class="stat-number">3</span>
+            <span class="stat-label">Deadlines this week</span>
+          </div>
+        </div>
+
+        <a class="btn btn-secondary" href="semester-detail.html">View semester details</a>
+      </article>
+
+      <article class="card">
+        <div class="card-header">
+          <div>
+            <p class="eyebrow">Focus</p>
+            <h2 class="section-title">Semester health</h2>
+          </div>
+        </div>
+
+        <p class="card-text">
+          You are actively tracking this semester. Keep courses and tasks updated
+          so your dashboard can stay useful in the next JavaScript phase.
+        </p>
+
+        <div class="progress-bar" aria-label="Semester progress">
+          <span style="width: 42%;"></span>
+        </div>
+
+        <p class="muted-text">42% of the semester timeline completed</p>
       </article>
     </section>
 
-    <section aria-labelledby="semester-list-title">
-      <h2 id="semester-list-title">All semesters</h2>
+    <section class="section-block" aria-labelledby="semester-list-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Timeline</p>
+          <h2 id="semester-list-title" class="section-title">All semesters</h2>
+        </div>
+      </div>
 
-      <article>
-        <h3><a href="semester-detail.html">Fall 2026</a></h3>
-        <p>Status: Current</p>
-        <p>Courses: 4</p>
-      </article>
+      <div class="card-grid">
+        <article class="card semester-card">
+          <div class="card-header">
+            <h3><a href="semester-detail.html">Fall 2026</a></h3>
+            <span class="badge badge-success">Current</span>
+          </div>
 
-      <article>
-        <h3>Spring 2027</h3>
-        <p>Status: Upcoming</p>
-        <p>Courses: 0</p>
-      </article>
+          <p class="card-text">Your active semester with courses and tasks in progress.</p>
 
-      <article>
-        <h3>Spring 2026</h3>
-        <p>Status: Past</p>
-        <p>Courses: 5</p>
-      </article>
+          <dl class="details-list">
+            <div>
+              <dt>Courses</dt>
+              <dd>4</dd>
+            </div>
+            <div>
+              <dt>Status</dt>
+              <dd>Current</dd>
+            </div>
+          </dl>
+        </article>
+
+        <article class="card semester-card">
+          <div class="card-header">
+            <h3>Spring 2027</h3>
+            <span class="badge badge-info">Upcoming</span>
+          </div>
+
+          <p class="card-text">Plan future courses before the semester begins.</p>
+
+          <dl class="details-list">
+            <div>
+              <dt>Courses</dt>
+              <dd>0</dd>
+            </div>
+            <div>
+              <dt>Status</dt>
+              <dd>Upcoming</dd>
+            </div>
+          </dl>
+        </article>
+
+        <article class="card semester-card">
+          <div class="card-header">
+            <h3>Spring 2026</h3>
+            <span class="badge badge-muted">Past</span>
+          </div>
+
+          <p class="card-text">Review completed academic work and past course load.</p>
+
+          <dl class="details-list">
+            <div>
+              <dt>Courses</dt>
+              <dd>5</dd>
+            </div>
+            <div>
+              <dt>Status</dt>
+              <dd>Past</dd>
+            </div>
+          </dl>
+        </article>
+      </div>
     </section>
 
-    <section aria-labelledby="create-semester-title" id="create-semester-form">
-      <h2 id="create-semester-title">Create semester</h2>
-
-      <form action="#" method="post">
+    <section class="section-block" aria-labelledby="create-semester-title" id="create-semester-form">
+      <div class="section-heading">
         <div>
-          <label for="semester-name">Semester name</label>
-          <input
-            type="text"
-            id="semester-name"
-            name="semester-name"
-            placeholder="Fall 2026"
-            required
-          >
+          <p class="eyebrow">Add semester</p>
+          <h2 id="create-semester-title" class="section-title">Create semester</h2>
+        </div>
+      </div>
+
+      <form class="card form-card" action="#" method="post">
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label" for="semester-name">Semester name</label>
+            <input
+              class="form-input"
+              type="text"
+              id="semester-name"
+              name="semester-name"
+              placeholder="Fall 2026"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="semester-status">Status</label>
+            <select class="form-input" id="semester-status" name="semester-status" required>
+              <option value="">Select status</option>
+              <option value="current">Current</option>
+              <option value="upcoming">Upcoming</option>
+              <option value="past">Past</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="start-date">Start date</label>
+            <input
+              class="form-input"
+              type="date"
+              id="start-date"
+              name="start-date"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="end-date">End date</label>
+            <input
+              class="form-input"
+              type="date"
+              id="end-date"
+              name="end-date"
+              required
+            >
+          </div>
         </div>
 
-        <div>
-          <label for="start-date">Start date</label>
-          <input
-            type="date"
-            id="start-date"
-            name="start-date"
-            required
-          >
-        </div>
-
-        <div>
-          <label for="end-date">End date</label>
-          <input
-            type="date"
-            id="end-date"
-            name="end-date"
-            required
-          >
-        </div>
-
-        <div>
-          <label for="semester-status">Status</label>
-          <select id="semester-status" name="semester-status" required>
-            <option value="">Select status</option>
-            <option value="current">Current</option>
-            <option value="upcoming">Upcoming</option>
-            <option value="past">Past</option>
-          </select>
-        </div>
-
-        <div>
+        <div class="checkbox-group">
           <input type="checkbox" id="active-semester" name="active-semester">
           <label for="active-semester">Set as active semester</label>
         </div>
 
-        <button type="submit">Save semester</button>
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit">Save semester</button>
+          <a class="btn btn-secondary" href="dashboard.html">Cancel</a>
+        </div>
       </form>
     </section>
 
-    <section aria-labelledby="empty-semesters-title">
-      <h2 id="empty-semesters-title">Empty state example</h2>
+    <section class="empty-state" aria-labelledby="empty-semesters-title">
+      <p class="eyebrow">Empty state example</p>
+      <h2 id="empty-semesters-title">No semesters yet</h2>
 
       <p>
-        No semesters yet. Create your first semester to start organizing your
-        courses and academic work.
+        Create your first semester to start organizing your courses, deadlines,
+        study sessions, and academic progress.
       </p>
+
+      <a class="btn btn-primary" href="#create-semester-form">Create first semester</a>
     </section>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <p>&copy; 2026 StudyFlow. Built for students who want better academic organization.</p>
   </footer>
 </body>
