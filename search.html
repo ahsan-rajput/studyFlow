@@ -7,18 +7,25 @@
 
   <meta
     name="description"
-    content="Search StudyFlow courses, tasks, notes, projects, exams, resources, and tags."
+    content="Search across courses, tasks, notes, deadlines, and academic content in StudyFlow."
   >
 
   <title>Search | StudyFlow</title>
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
-  <header>
-    <nav aria-label="Main navigation">
-      <a href="index.html">StudyFlow</a>
+  <header class="app-header">
+    <nav class="app-nav" aria-label="Main navigation">
+      <a class="brand" href="index.html">StudyFlow</a>
 
-      <ul>
+      <ul class="nav-list">
         <li><a href="dashboard.html">Dashboard</a></li>
         <li><a href="semesters.html">Semesters</a></li>
         <li><a href="courses.html">Courses</a></li>
@@ -29,141 +36,197 @@
         <li><a href="search.html" aria-current="page">Search</a></li>
         <li><a href="notifications.html">Notifications</a></li>
         <li><a href="settings.html">Settings</a></li>
+        <li><a href="login.html">Log out</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section aria-labelledby="search-title">
-      <h1 id="search-title">Search StudyFlow</h1>
-
-      <p>
-        Search across your courses, tasks, notes, exams, projects, study sessions,
-        resources, and tags.
-      </p>
+  <main class="app-main">
+    <section class="page-header" aria-labelledby="search-title">
+      <div>
+        <p class="eyebrow">Find anything</p>
+        <h1 id="search-title" class="page-title">Search</h1>
+        <p class="page-description">
+          Search across courses, tasks, notes, tags, and academic records from one place.
+        </p>
+      </div>
     </section>
 
-    <section aria-labelledby="search-form-title">
-      <h2 id="search-form-title">Search and filters</h2>
-
-      <form action="#" method="get">
+    <section class="section-block" aria-labelledby="search-form-title">
+      <div class="section-heading">
         <div>
-          <label for="search-query">Search query</label>
-          <input
-            type="search"
-            id="search-query"
-            name="search-query"
-            placeholder="Search notes, tasks, courses, or tags"
-          >
+          <p class="eyebrow">Query</p>
+          <h2 id="search-form-title" class="section-title">Search StudyFlow</h2>
+        </div>
+      </div>
+
+      <form class="card form-card" action="#" method="get">
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label" for="search-query">Search term</label>
+            <input
+              class="form-input"
+              type="search"
+              id="search-query"
+              name="search-query"
+              placeholder="Search for Biology, lab notes, quiz, deadline..."
+            >
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="search-type">Content type</label>
+            <select class="form-input" id="search-type" name="search-type">
+              <option value="">Everything</option>
+              <option value="courses">Courses</option>
+              <option value="tasks">Tasks</option>
+              <option value="notes">Notes</option>
+              <option value="tags">Tags</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="search-course">Course</label>
+            <select class="form-input" id="search-course" name="search-course">
+              <option value="">All courses</option>
+              <option value="biology-101">Biology 101</option>
+              <option value="calculus-1">Calculus I</option>
+              <option value="cs-101">Computer Science 101</option>
+            </select>
+          </div>
         </div>
 
-        <div>
-          <label for="result-type">Result type</label>
-          <select id="result-type" name="result-type">
-            <option value="">All result types</option>
-            <option value="courses">Courses</option>
-            <option value="tasks">Tasks</option>
-            <option value="notes">Notes</option>
-            <option value="study-sessions">Study sessions</option>
-            <option value="resources">Resources</option>
-          </select>
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit">Search</button>
+          <a class="btn btn-secondary" href="dashboard.html">Back to dashboard</a>
         </div>
-
-        <div>
-          <label for="semester-filter">Semester</label>
-          <select id="semester-filter" name="semester-filter">
-            <option value="">All semesters</option>
-            <option value="fall-2026">Fall 2026</option>
-            <option value="spring-2027">Spring 2027</option>
-          </select>
-        </div>
-
-        <div>
-          <label for="course-filter">Course</label>
-          <select id="course-filter" name="course-filter">
-            <option value="">All courses</option>
-            <option value="biology-101">Biology 101</option>
-            <option value="calculus-1">Calculus I</option>
-            <option value="cs-101">Computer Science 101</option>
-          </select>
-        </div>
-
-        <div>
-          <label for="status-filter">Status</label>
-          <select id="status-filter" name="status-filter">
-            <option value="">Any status</option>
-            <option value="not-started">Not started</option>
-            <option value="in-progress">In progress</option>
-            <option value="completed">Completed</option>
-            <option value="overdue">Overdue</option>
-          </select>
-        </div>
-
-        <button type="submit">Search</button>
       </form>
     </section>
 
-    <section aria-labelledby="search-results-title">
-      <h2 id="search-results-title">Search results for “biology”</h2>
+    <section class="content-grid" aria-label="Search overview">
+      <article class="card highlight-card">
+        <div class="card-header">
+          <div>
+            <p class="eyebrow">Results preview</p>
+            <h2 class="section-title">Search across your academic workspace</h2>
+          </div>
 
-      <section aria-labelledby="course-results-title">
-        <h3 id="course-results-title">Courses</h3>
+          <span class="badge badge-info">Phase 2 static</span>
+        </div>
 
-        <article>
-          <h4><a href="course-detail.html">Biology 101</a></h4>
-          <p>Matched course name and recent biology tasks.</p>
-        </article>
-      </section>
+        <p class="card-text">
+          This page is visually prepared for Phase 3, where JavaScript will search
+          localStorage data from courses, tasks, notes, and tags.
+        </p>
 
-      <section aria-labelledby="task-results-title">
-        <h3 id="task-results-title">Tasks</h3>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-number">3</span>
+            <span class="stat-label">Courses</span>
+          </div>
 
-        <article>
-          <h4>Finish biology lab notes</h4>
-          <p>Course: Biology 101</p>
-          <p>Due: Today</p>
-          <p>Priority: High</p>
-        </article>
+          <div class="stat-card">
+            <span class="stat-number">8</span>
+            <span class="stat-label">Tasks</span>
+          </div>
 
-        <article>
-          <h4>Read chapter 4</h4>
-          <p>Course: Biology 101</p>
-          <p>Due: In 5 days</p>
-          <p>Priority: Medium</p>
-        </article>
-      </section>
+          <div class="stat-card">
+            <span class="stat-number">12</span>
+            <span class="stat-label">Notes</span>
+          </div>
+        </div>
+      </article>
 
-      <section aria-labelledby="note-results-title">
-        <h3 id="note-results-title">Notes</h3>
+      <article class="card">
+        <div class="card-header">
+          <div>
+            <p class="eyebrow">Tip</p>
+            <h2 class="section-title">Search strategy</h2>
+          </div>
 
-        <article>
-          <h4>Biology cell structure notes</h4>
-          <p>Course: Biology 101</p>
-          <p>Tags: cells, exam-review, lab</p>
-        </article>
-      </section>
+          <span class="badge badge-success">Organized</span>
+        </div>
 
-      <section aria-labelledby="study-session-results-title">
-        <h3 id="study-session-results-title">Study sessions</h3>
+        <p class="card-text">
+          Use clear titles, course names, and tags so search becomes powerful once
+          data is dynamic.
+        </p>
 
-        <article>
-          <h4>Biology lab preparation</h4>
-          <p>Time: Tomorrow, 5:00 PM - 6:00 PM</p>
-          <p>Linked task: Finish biology lab notes</p>
-        </article>
-      </section>
+        <div class="progress-bar" aria-label="Search readiness">
+          <span style="width: 70%;"></span>
+        </div>
+
+        <p class="muted-text">Search readiness placeholder for Phase 2.</p>
+      </article>
     </section>
 
-    <section aria-labelledby="empty-search-title">
-      <h2 id="empty-search-title">Empty state example</h2>
+    <section class="section-block" aria-labelledby="results-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Example results</p>
+          <h2 id="results-title" class="section-title">Search results</h2>
+        </div>
+      </div>
+
+      <div class="card-list">
+        <article class="card">
+          <div class="card-header">
+            <div>
+              <h3><a href="course-detail.html">Biology 101</a></h3>
+              <p class="card-text">Course result</p>
+            </div>
+
+            <span class="badge badge-success">Course</span>
+          </div>
+
+          <p class="card-text">
+            Biology course with lab tasks, notes, and upcoming deadlines.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="card-header">
+            <div>
+              <h3>Biology lab notes</h3>
+              <p class="card-text">Task result</p>
+            </div>
+
+            <span class="badge badge-danger">Task</span>
+          </div>
+
+          <p class="card-text">
+            Overdue Biology assignment connected to the current semester.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="card-header">
+            <div>
+              <h3>Biology cell structure notes</h3>
+              <p class="card-text">Note result</p>
+            </div>
+
+            <span class="badge badge-info">Note</span>
+          </div>
+
+          <p class="card-text">
+            Recently updated notes covering organelles, membrane structure, and lab review.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="empty-state" aria-labelledby="empty-search-title">
+      <p class="eyebrow">Empty state example</p>
+      <h2 id="empty-search-title">No search results</h2>
 
       <p>
-        No search results found. Try a different keyword or remove some filters.
+        Try a different keyword, remove filters, or search by course, task title,
+        note title, or tag.
       </p>
     </section>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <p>&copy; 2026 StudyFlow. Built for students who want better academic organization.</p>
   </footer>
 </body>
