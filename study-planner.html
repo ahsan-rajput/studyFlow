@@ -7,18 +7,25 @@
 
   <meta
     name="description"
-    content="Plan and track study sessions in StudyFlow."
+    content="Plan study sessions, review goals, and organize focused academic work in StudyFlow."
   >
 
   <title>Study Planner | StudyFlow</title>
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
-  <header>
-    <nav aria-label="Main navigation">
-      <a href="index.html">StudyFlow</a>
+  <header class="app-header">
+    <nav class="app-nav" aria-label="Main navigation">
+      <a class="brand" href="index.html">StudyFlow</a>
 
-      <ul>
+      <ul class="nav-list">
         <li><a href="dashboard.html">Dashboard</a></li>
         <li><a href="semesters.html">Semesters</a></li>
         <li><a href="courses.html">Courses</a></li>
@@ -29,166 +36,272 @@
         <li><a href="search.html">Search</a></li>
         <li><a href="notifications.html">Notifications</a></li>
         <li><a href="settings.html">Settings</a></li>
+        <li><a href="login.html">Log out</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section aria-labelledby="study-planner-title">
-      <h1 id="study-planner-title">Study planner</h1>
+  <main class="app-main">
+    <section class="page-header" aria-labelledby="planner-title">
+      <div>
+        <p class="eyebrow">Focused study</p>
+        <h1 id="planner-title" class="page-title">Study Planner</h1>
+        <p class="page-description">
+          Plan focused study blocks, connect sessions to courses, and keep your
+          weekly academic workload under control.
+        </p>
+      </div>
 
-      <p>
-        Plan study sessions, connect them to courses or tasks, and track planned
-        study time versus completed study time.
-      </p>
-
-      <a href="#create-study-session-form">Create study session</a>
+      <a class="btn btn-primary" href="#create-session-form">Plan session</a>
     </section>
 
-    <section aria-labelledby="today-study-title">
-      <h2 id="today-study-title">Today’s study sessions</h2>
+    <section class="content-grid" aria-label="Study planner overview">
+      <article class="card highlight-card">
+        <div class="card-header">
+          <div>
+            <p class="eyebrow">This week</p>
+            <h2 class="section-title">Study schedule</h2>
+          </div>
 
-      <article>
-        <h3>Calculus review session</h3>
-        <p>Course: Calculus I</p>
-        <p>Time: 6:00 PM - 7:00 PM</p>
-        <p>Goal: Practice limits and derivative problems.</p>
-        <p>Status: Planned</p>
+          <span class="badge badge-success">3 planned</span>
+        </div>
+
+        <p class="card-text">
+          Your study plan helps turn large academic goals into smaller focused
+          sessions.
+        </p>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-number">3</span>
+            <span class="stat-label">Sessions</span>
+          </div>
+
+          <div class="stat-card">
+            <span class="stat-number">5h</span>
+            <span class="stat-label">Planned time</span>
+          </div>
+
+          <div class="stat-card">
+            <span class="stat-number">2</span>
+            <span class="stat-label">Courses</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-header">
+          <div>
+            <p class="eyebrow">Recommendation</p>
+            <h2 class="section-title">Best next session</h2>
+          </div>
+
+          <span class="badge badge-warning">Biology 101</span>
+        </div>
+
+        <p class="card-text">
+          Biology has an upcoming lab deadline, so it should receive focused
+          study time before lower-priority work.
+        </p>
+
+        <div class="progress-bar" aria-label="Study planning balance">
+          <span style="width: 66%;"></span>
+        </div>
+
+        <p class="muted-text">Placeholder planning balance for Phase 2.</p>
       </article>
     </section>
 
-    <section aria-labelledby="upcoming-study-title">
-      <h2 id="upcoming-study-title">Upcoming study sessions</h2>
+    <section class="section-block" aria-labelledby="today-sessions-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Today</p>
+          <h2 id="today-sessions-title" class="section-title">Study sessions for today</h2>
+        </div>
+      </div>
 
-      <article>
-        <h3>Biology lab preparation</h3>
-        <p>Course: Biology 101</p>
-        <p>Time: Tomorrow, 5:00 PM - 6:00 PM</p>
-        <p>Linked task: Finish biology lab notes</p>
-        <p>Status: Planned</p>
-      </article>
+      <div class="card-list">
+        <article class="card task-card">
+          <div class="card-header">
+            <div>
+              <h3>Biology lab review</h3>
+              <p class="card-text">Biology 101 · 45 minutes</p>
+            </div>
 
-      <article>
-        <h3>Computer science quiz review</h3>
-        <p>Course: Computer Science 101</p>
-        <p>Time: Friday, 4:00 PM - 5:30 PM</p>
-        <p>Linked task: Prepare for computer science quiz</p>
-        <p>Status: Planned</p>
-      </article>
+            <span class="badge badge-danger">High focus</span>
+          </div>
+
+          <p class="card-text">
+            Review lab notes, organize observations, and prepare submission checklist.
+          </p>
+        </article>
+
+        <article class="card task-card">
+          <div class="card-header">
+            <div>
+              <h3>Calculus practice</h3>
+              <p class="card-text">Calculus I · 60 minutes</p>
+            </div>
+
+            <span class="badge badge-info">Practice</span>
+          </div>
+
+          <p class="card-text">
+            Complete derivative problems and mark questions that need review.
+          </p>
+        </article>
+      </div>
     </section>
 
-    <section aria-labelledby="completed-study-title">
-      <h2 id="completed-study-title">Completed study sessions</h2>
+    <section class="section-block" aria-labelledby="weekly-plan-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Weekly plan</p>
+          <h2 id="weekly-plan-title" class="section-title">Upcoming study sessions</h2>
+        </div>
+      </div>
 
-      <article>
-        <h3>Biology vocabulary review</h3>
-        <p>Course: Biology 101</p>
-        <p>Completed: Yesterday</p>
-        <p>Planned duration: 45 minutes</p>
-        <p>Completed duration: 45 minutes</p>
-      </article>
+      <div class="card-grid">
+        <article class="card">
+          <div class="card-header">
+            <h3>Computer science quiz review</h3>
+            <span class="badge badge-warning">Tomorrow</span>
+          </div>
+
+          <p class="card-text">Review loops, arrays, and practice problems.</p>
+
+          <dl class="details-list">
+            <div>
+              <dt>Course</dt>
+              <dd>Computer Science 101</dd>
+            </div>
+            <div>
+              <dt>Duration</dt>
+              <dd>90 minutes</dd>
+            </div>
+          </dl>
+        </article>
+
+        <article class="card">
+          <div class="card-header">
+            <h3>Biology chapter review</h3>
+            <span class="badge badge-info">Friday</span>
+          </div>
+
+          <p class="card-text">Review chapter notes and prepare quiz flashcards.</p>
+
+          <dl class="details-list">
+            <div>
+              <dt>Course</dt>
+              <dd>Biology 101</dd>
+            </div>
+            <div>
+              <dt>Duration</dt>
+              <dd>60 minutes</dd>
+            </div>
+          </dl>
+        </article>
+      </div>
     </section>
 
-    <section aria-labelledby="study-summary-title">
-      <h2 id="study-summary-title">Study time summary</h2>
-
-      <ul>
-        <li>Planned study time this week: 6 hours</li>
-        <li>Completed study time this week: 2.5 hours</li>
-        <li>Missed study sessions: 1</li>
-        <li>Most studied course: Biology 101</li>
-      </ul>
-    </section>
-
-    <section aria-labelledby="create-study-session-title" id="create-study-session-form">
-      <h2 id="create-study-session-title">Create study session</h2>
-
-      <form action="#" method="post">
+    <section class="section-block" aria-labelledby="create-session-title" id="create-session-form">
+      <div class="section-heading">
         <div>
-          <label for="session-title">Session title</label>
-          <input
-            type="text"
-            id="session-title"
-            name="session-title"
-            required
-          >
+          <p class="eyebrow">New session</p>
+          <h2 id="create-session-title" class="section-title">Plan study session</h2>
+        </div>
+      </div>
+
+      <form class="card form-card" action="#" method="post">
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label" for="session-title">Session title</label>
+            <input
+              class="form-input"
+              type="text"
+              id="session-title"
+              name="session-title"
+              placeholder="Biology lab review"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="session-course">Course</label>
+            <select class="form-input" id="session-course" name="session-course" required>
+              <option value="">Select course</option>
+              <option value="biology-101">Biology 101</option>
+              <option value="calculus-1">Calculus I</option>
+              <option value="cs-101">Computer Science 101</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="session-date">Date</label>
+            <input
+              class="form-input"
+              type="date"
+              id="session-date"
+              name="session-date"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="session-time">Time</label>
+            <input
+              class="form-input"
+              type="time"
+              id="session-time"
+              name="session-time"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="session-duration">Duration</label>
+            <input
+              class="form-input"
+              type="text"
+              id="session-duration"
+              name="session-duration"
+              placeholder="60 minutes"
+            >
+          </div>
         </div>
 
-        <div>
-          <label for="session-course">Course</label>
-          <select id="session-course" name="session-course" required>
-            <option value="">Select course</option>
-            <option value="biology-101">Biology 101</option>
-            <option value="calculus-1">Calculus I</option>
-            <option value="cs-101">Computer Science 101</option>
-          </select>
-        </div>
-
-        <div>
-          <label for="linked-task">Linked task</label>
-          <select id="linked-task" name="linked-task">
-            <option value="">No linked task</option>
-            <option value="biology-lab-notes">Finish biology lab notes</option>
-            <option value="cs-quiz">Prepare for computer science quiz</option>
-            <option value="calculus-practice">Review calculus practice problems</option>
-          </select>
-        </div>
-
-        <div>
-          <label for="session-date">Session date</label>
-          <input
-            type="date"
-            id="session-date"
-            name="session-date"
-            required
-          >
-        </div>
-
-        <div>
-          <label for="start-time">Start time</label>
-          <input
-            type="time"
-            id="start-time"
-            name="start-time"
-            required
-          >
-        </div>
-
-        <div>
-          <label for="end-time">End time</label>
-          <input
-            type="time"
-            id="end-time"
-            name="end-time"
-            required
-          >
-        </div>
-
-        <div>
-          <label for="session-goal">Study goal</label>
+        <div class="form-group">
+          <label class="form-label" for="session-goal">Study goal</label>
           <textarea
+            class="form-input"
             id="session-goal"
             name="session-goal"
-            rows="5"
-            placeholder="What do you want to complete during this session?"
+            rows="4"
+            placeholder="What should this study session accomplish?"
           ></textarea>
         </div>
 
-        <button type="submit">Save study session</button>
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit">Save session</button>
+          <a class="btn btn-secondary" href="dashboard.html">Cancel</a>
+        </div>
       </form>
     </section>
 
-    <section aria-labelledby="empty-study-title">
-      <h2 id="empty-study-title">Empty state example</h2>
+    <section class="empty-state" aria-labelledby="empty-study-sessions-title">
+      <p class="eyebrow">Empty state example</p>
+      <h2 id="empty-study-sessions-title">No study sessions scheduled</h2>
 
       <p>
-        No study sessions scheduled. Plan a study session to connect your time
-        with your academic goals.
+        Plan your first study session to turn deadlines and course goals into
+        focused blocks of work.
       </p>
+
+      <a class="btn btn-primary" href="#create-session-form">Plan first session</a>
     </section>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <p>&copy; 2026 StudyFlow. Built for students who want better academic organization.</p>
   </footer>
 </body>
