@@ -2,195 +2,193 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta
-    name="description"
-    content="StudyFlow dashboard for viewing academic tasks, deadlines, courses, notes, study sessions, GPA goals, and smart recommendations."
-  >
-
   <title>Dashboard | StudyFlow</title>
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
-
 <body>
-  <header>
-    <nav aria-label="Main navigation">
-      <a href="index.html">StudyFlow</a>
+  <div class="app-layout">
+    <aside class="sidebar">
+      <a class="sidebar-logo" href="dashboard.html">StudyFlow</a>
 
-      <ul>
-        <li><a href="dashboard.html" aria-current="page">Dashboard</a></li>
-        <li><a href="semesters.html">Semesters</a></li>
-        <li><a href="courses.html">Courses</a></li>
-        <li><a href="tasks.html">Tasks</a></li>
-        <li><a href="notes.html">Notes</a></li>
-        <li><a href="study-planner.html">Study planner</a></li>
-        <li><a href="gpa-progress.html">GPA/progress</a></li>
-        <li><a href="search.html">Search</a></li>
-        <li><a href="notifications.html">Notifications</a></li>
-        <li><a href="settings.html">Settings</a></li>
-        <li><a href="login.html">Log out</a></li>
-      </ul>
-    </nav>
-  </header>
+      <nav class="sidebar-nav">
+        <a class="nav-link active" href="dashboard.html">Dashboard</a>
+        <a class="nav-link" href="semesters.html">Semesters</a>
+        <a class="nav-link" href="courses.html">Courses</a>
+        <a class="nav-link" href="tasks.html">Tasks</a>
+        <a class="nav-link" href="notes.html">Notes</a>
+        <a class="nav-link" href="study-planner.html">Study Planner</a>
+        <a class="nav-link" href="gpa-progress.html">GPA Progress</a>
+        <a class="nav-link" href="search.html">Search</a>
+        <a class="nav-link" href="notifications.html">Notifications</a>
+        <a class="nav-link" href="settings.html">Settings</a>
+      </nav>
 
-  <main>
-    <section aria-labelledby="dashboard-title">
-      <h1 id="dashboard-title">Your StudyFlow dashboard</h1>
+      <a class="nav-link logout-link" href="login.html">Log out</a>
+    </aside>
 
-      <p>
-        This dashboard gives you a static preview of your academic workload,
-        priorities, deadlines, study sessions, notes, and progress.
-      </p>
-    </section>
+    <main class="app-main">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Fall 2026</p>
+          <h1>Your StudyFlow dashboard</h1>
+        </div>
+        <a class="btn btn-primary" href="tasks.html">View Tasks</a>
+      </header>
 
-    <section aria-labelledby="overview-title">
-      <h2 id="overview-title">Academic overview</h2>
+      <section class="page-intro">
+        <p>
+          This dashboard gives you a preview of your academic workload, priorities,
+          deadlines, study sessions, notes, and progress.
+        </p>
+      </section>
 
-      <ul>
-        <li>Active semester: Fall 2026</li>
-        <li>Total courses: 4</li>
-        <li>Open tasks: 8</li>
-        <li>Overdue tasks: 2</li>
-        <li>Study sessions today: 1</li>
-        <li>Current GPA goal: 3.70</li>
-      </ul>
-    </section>
+      <section class="dashboard-overview">
+        <article class="stat-card">
+          <span>Active semester</span>
+          <strong>Fall 2026</strong>
+        </article>
+        <article class="stat-card">
+          <span>Total courses</span>
+          <strong>4</strong>
+        </article>
+        <article class="stat-card">
+          <span>Open tasks</span>
+          <strong>8</strong>
+        </article>
+        <article class="stat-card warning">
+          <span>Overdue tasks</span>
+          <strong>2</strong>
+        </article>
+      </section>
 
-    <section aria-labelledby="todays-tasks-title">
-      <h2 id="todays-tasks-title">Today’s tasks</h2>
+      <section class="dashboard-grid">
+        <article class="card">
+          <div class="card-header">
+            <h2>Today’s tasks</h2>
+          </div>
 
-      <article>
-        <h3>Finish biology lab notes</h3>
-        <p>Course: Biology 101</p>
-        <p>Due: Today</p>
-        <p>Priority: High</p>
-      </article>
+          <div class="task-card">
+            <h3>Finish biology lab notes</h3>
+            <p>Course: Biology 101</p>
+            <p>Due: Today</p>
+            <span class="badge badge-danger">High Priority</span>
+          </div>
 
-      <article>
-        <h3>Review calculus practice problems</h3>
-        <p>Course: Calculus I</p>
-        <p>Due: Today</p>
-        <p>Priority: Medium</p>
-      </article>
-    </section>
+          <div class="task-card">
+            <h3>Review calculus practice problems</h3>
+            <p>Course: Calculus I</p>
+            <p>Due: Today</p>
+            <span class="badge badge-warning">Medium Priority</span>
+          </div>
+        </article>
 
-    <section aria-labelledby="upcoming-deadlines-title">
-      <h2 id="upcoming-deadlines-title">Upcoming deadlines</h2>
+        <article class="card">
+          <div class="card-header">
+            <h2>Upcoming deadlines</h2>
+          </div>
 
-      <ul>
-        <li>English essay draft — due in 2 days</li>
-        <li>Computer science quiz — due in 3 days</li>
-        <li>History reading response — due in 5 days</li>
-      </ul>
-    </section>
+          <ul class="clean-list">
+            <li>English essay draft — due in 2 days</li>
+            <li>Computer science quiz — due in 3 days</li>
+            <li>History reading response — due in 5 days</li>
+          </ul>
+        </article>
 
-    <section aria-labelledby="overdue-title">
-      <h2 id="overdue-title">Overdue tasks</h2>
+        <article class="card alert-card">
+          <div class="card-header">
+            <h2>Overdue tasks</h2>
+          </div>
 
-      <article>
-        <h3>Submit chemistry worksheet</h3>
-        <p>Course: Chemistry 101</p>
-        <p>Was due: Yesterday</p>
-        <p>Priority: High</p>
-      </article>
+          <div class="task-card">
+            <h3>Submit chemistry worksheet</h3>
+            <p>Course: Chemistry 101</p>
+            <p>Was due: Yesterday</p>
+            <span class="badge badge-danger">Overdue</span>
+          </div>
 
-      <article>
-        <h3>Upload lecture reflection</h3>
-        <p>Course: Sociology 200</p>
-        <p>Was due: 2 days ago</p>
-        <p>Priority: Medium</p>
-      </article>
-    </section>
+          <div class="task-card">
+            <h3>Upload lecture reflection</h3>
+            <p>Course: Sociology 200</p>
+            <p>Was due: 2 days ago</p>
+            <span class="badge badge-warning">Needs Review</span>
+          </div>
+        </article>
 
-    <section aria-labelledby="course-attention-title">
-      <h2 id="course-attention-title">Courses needing attention</h2>
+        <article class="card">
+          <div class="card-header">
+            <h2>Courses needing attention</h2>
+          </div>
 
-      <ol>
-        <li>Biology 101 — high-priority lab deadline today</li>
-        <li>Chemistry 101 — overdue worksheet</li>
-        <li>Computer Science 101 — quiz coming soon</li>
-      </ol>
-    </section>
+          <ol class="clean-list numbered-list">
+            <li>Biology 101 — high-priority lab deadline today</li>
+            <li>Chemistry 101 — overdue worksheet</li>
+            <li>Computer Science 101 — quiz coming soon</li>
+          </ol>
+        </article>
 
-    <section aria-labelledby="study-sessions-title">
-      <h2 id="study-sessions-title">Study sessions for today</h2>
+        <article class="card">
+          <div class="card-header">
+            <h2>Study sessions for today</h2>
+          </div>
 
-      <article>
-        <h3>Calculus review session</h3>
-        <p>Time: 6:00 PM - 7:00 PM</p>
-        <p>Goal: Practice limits and derivatives.</p>
-      </article>
-    </section>
+          <div class="study-card">
+            <h3>Calculus review session</h3>
+            <p>Time: 6:00 PM - 7:00 PM</p>
+            <p>Goal: Practice limits and derivatives.</p>
+          </div>
+        </article>
 
-    <section aria-labelledby="gpa-status-title">
-      <h2 id="gpa-status-title">GPA goal status</h2>
+        <article class="card">
+          <div class="card-header">
+            <h2>GPA goal status</h2>
+          </div>
 
-      <p>Current GPA: 3.40</p>
-      <p>Target GPA: 3.70</p>
-      <p>Status: On track, but needs consistent task completion.</p>
-    </section>
+          <p>Current GPA: <strong>3.40</strong></p>
+          <p>Target GPA: <strong>3.70</strong></p>
 
-    <section aria-labelledby="high-priority-title">
-      <h2 id="high-priority-title">High-priority tasks</h2>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 75%;"></div>
+          </div>
 
-      <ul>
-        <li>Finish biology lab notes</li>
-        <li>Submit chemistry worksheet</li>
-        <li>Prepare for computer science quiz</li>
-      </ul>
-    </section>
+          <p class="muted-text">On track, but needs consistent task completion.</p>
+        </article>
 
-    <section aria-labelledby="recent-notes-title">
-      <h2 id="recent-notes-title">Recently updated notes</h2>
+        <article class="card">
+          <div class="card-header">
+            <h2>Recently updated notes</h2>
+          </div>
 
-      <article>
-        <h3>Biology cell structure notes</h3>
-        <p>Updated today.</p>
-      </article>
+          <div class="note-card">
+            <h3>Biology cell structure notes</h3>
+            <p>Updated today.</p>
+          </div>
 
-      <article>
-        <h3>Calculus derivative rules</h3>
-        <p>Updated yesterday.</p>
-      </article>
-    </section>
+          <div class="note-card">
+            <h3>Calculus derivative rules</h3>
+            <p>Updated yesterday.</p>
+          </div>
+        </article>
 
-    <section aria-labelledby="recommendations-title">
-      <h2 id="recommendations-title">Smart recommendations</h2>
+        <article class="card recommendation-card">
+          <div class="card-header">
+            <h2>Smart recommendations</h2>
+          </div>
 
-      <ul>
-        <li>Focus on overdue chemistry work before starting new low-priority tasks.</li>
-        <li>Schedule extra study time for Biology 101 because a lab deadline is due today.</li>
-        <li>Review computer science notes before the upcoming quiz.</li>
-      </ul>
-    </section>
-
-    <section aria-labelledby="empty-states-title">
-      <h2 id="empty-states-title">Example empty states</h2>
-
-      <article>
-        <h3>No deadlines this week</h3>
-        <p>When there are no upcoming deadlines, StudyFlow will show a helpful empty state instead of a blank section.</p>
-      </article>
-
-      <article>
-        <h3>No study sessions scheduled</h3>
-        <p>When no study sessions exist, the dashboard will encourage the student to plan one.</p>
-      </article>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2026 StudyFlow. Built for students who want better academic organization.</p>
-
-    <nav aria-label="Footer navigation">
-      <ul>
-        <li><a href="dashboard.html">Dashboard</a></li>
-        <li><a href="tasks.html">Tasks</a></li>
-        <li><a href="courses.html">Courses</a></li>
-        <li><a href="settings.html">Settings</a></li>
-      </ul>
-    </nav>
-  </footer>
+          <ul class="clean-list">
+            <li>Focus on overdue chemistry work before starting new low-priority tasks.</li>
+            <li>Schedule extra study time for Biology 101.</li>
+            <li>Review computer science notes before the upcoming quiz.</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </div>
 </body>
-</html> 
+</html>
