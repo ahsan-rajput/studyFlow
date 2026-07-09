@@ -196,6 +196,17 @@
   opacity: 0.9;
 }
 
+.cta-section .btn-ghost {
+  color: var(--color-white);
+  border-color: rgb(255 255 255 / 0.35);
+}
+
+.cta-section .btn-ghost:hover {
+  color: var(--color-white);
+  background: rgb(255 255 255 / 0.12);
+  border-color: rgb(255 255 255 / 0.55);
+}
+
 /* Footer */
 
 .site-footer {
