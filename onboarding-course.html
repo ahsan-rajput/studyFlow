@@ -2,141 +2,145 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="description"
-    content="Add your first course to StudyFlow during onboarding."
-  >
+  <title>Add Your First Course | StudyFlow</title>
+  <meta name="description" content="Add your first course in StudyFlow so tasks, notes, deadlines, and study sessions can be organized by class.">
 
-  <title>Add First Course | StudyFlow</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
-  <header>
-    <nav aria-label="Main navigation">
-      <a href="index.html">StudyFlow</a>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-      <ul>
-        <li><a href="onboarding-semester.html">Back to semester</a></li>
-        <li><a href="dashboard.html">Skip to dashboard</a></li>
-      </ul>
-    </nav>
-  </header>
+  <main id="main-content" class="onboarding-page">
+    <div class="onboarding-shell">
+      <section class="onboarding-card" aria-labelledby="course-title">
+        <div class="stack-lg">
+          <header class="auth-header">
+            <a class="brand" href="index.html" aria-label="StudyFlow home">
+              <span class="brand-mark">SF</span>
+              <span>StudyFlow</span>
+            </a>
 
-  <main>
-    <section aria-labelledby="course-title">
-      <h1 id="course-title">Add your first course</h1>
+            <div class="stack-sm">
+              <p class="eyebrow">Step 2 of 4</p>
+              <h1 id="course-title" class="auth-title">Add your first course</h1>
+              <p class="auth-description">
+                Courses are the center of StudyFlow. Tasks, notes, deadlines, and study sessions will connect back to them.
+              </p>
+            </div>
+          </header>
 
-      <p>
-        Courses are the center of StudyFlow. Tasks, notes, study sessions, and
-        progress tracking will connect back to your courses.
-      </p>
+          <ol class="onboarding-steps" aria-label="Onboarding progress">
+            <li class="onboarding-step complete" aria-label="Welcome complete"></li>
+            <li class="onboarding-step complete" aria-label="Semester complete"></li>
+            <li class="onboarding-step active" aria-label="Current step: Course"></li>
+            <li class="onboarding-step" aria-label="Next step: Deadline"></li>
+            <li class="onboarding-step" aria-label="Final step: GPA goal"></li>
+          </ol>
 
-      <form action="#" method="post">
-        <div>
-          <label for="course-name">Course name</label>
-          <input
-            type="text"
-            id="course-name"
-            name="course-name"
-            placeholder="Introduction to Computer Science"
-            required
-          >
+          <form class="form" action="#" method="post">
+            <div class="form-section">
+              <div>
+                <h2 class="form-section-title">Course details</h2>
+                <p class="form-section-description">
+                  Add one course now. You can add more courses later from the courses page.
+                </p>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="course-name">Course name</label>
+                  <input
+                    class="form-input"
+                    type="text"
+                    id="course-name"
+                    name="course-name"
+                    placeholder="Example: General Biology"
+                    required
+                  >
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="course-code">Course code</label>
+                  <input
+                    class="form-input"
+                    type="text"
+                    id="course-code"
+                    name="course-code"
+                    placeholder="Example: BIO 101"
+                  >
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="instructor">Instructor</label>
+                  <input
+                    class="form-input"
+                    type="text"
+                    id="instructor"
+                    name="instructor"
+                    placeholder="Example: Dr. Khan"
+                  >
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="credit-hours">Credit hours</label>
+                  <select class="form-select" id="credit-hours" name="credit-hours">
+                    <option value="">Select credit hours</option>
+                    <option value="1">1 credit hour</option>
+                    <option value="2">2 credit hours</option>
+                    <option value="3">3 credit hours</option>
+                    <option value="4">4 credit hours</option>
+                    <option value="5">5 credit hours</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="schedule">Schedule</label>
+                <input
+                  class="form-input"
+                  type="text"
+                  id="schedule"
+                  name="schedule"
+                  placeholder="Example: Mon/Wed 10:00 AM"
+                >
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="target-grade">Target grade</label>
+                <select class="form-select" id="target-grade" name="target-grade">
+                  <option value="">Select target grade</option>
+                  <option value="A">A</option>
+                  <option value="B">B</option>
+                  <option value="C">C</option>
+                  <option value="D">D</option>
+                </select>
+                <p class="form-hint">
+                  This will later help StudyFlow connect course goals with GPA progress.
+                </p>
+              </div>
+            </div>
+
+            <div class="form-actions-between">
+              <a class="btn btn-secondary" href="onboarding-semester.html">Back</a>
+              <a class="btn btn-primary" href="onboarding-deadline.html">Continue to deadline</a>
+            </div>
+          </form>
+
+          <p class="auth-meta">
+            Static prototype only. Course data will be saved in the browser during the JavaScript phase.
+          </p>
         </div>
-
-        <div>
-          <label for="course-code">Course code</label>
-          <input
-            type="text"
-            id="course-code"
-            name="course-code"
-            placeholder="CS101"
-          >
-        </div>
-
-        <div>
-          <label for="instructor">Instructor</label>
-          <input
-            type="text"
-            id="instructor"
-            name="instructor"
-            placeholder="Dr. Smith"
-          >
-        </div>
-
-        <div>
-          <label for="credit-hours">Credit hours</label>
-          <input
-            type="number"
-            id="credit-hours"
-            name="credit-hours"
-            min="0"
-            step="0.5"
-            placeholder="3"
-          >
-        </div>
-
-        <div>
-          <label for="course-schedule">Schedule</label>
-          <input
-            type="text"
-            id="course-schedule"
-            name="course-schedule"
-            placeholder="Monday and Wednesday, 10:00 AM"
-          >
-        </div>
-
-        <div>
-          <label for="course-location">Location</label>
-          <input
-            type="text"
-            id="course-location"
-            name="course-location"
-            placeholder="Room 204 or online"
-          >
-        </div>
-
-        <div>
-          <label for="target-grade">Target grade</label>
-          <input
-            type="text"
-            id="target-grade"
-            name="target-grade"
-            placeholder="A"
-          >
-        </div>
-
-        <button type="submit">Save course</button>
-      </form>
-
-      <p>
-        Next step:
-        <a href="onboarding-deadline.html">Add your first deadline</a>
-      </p>
-    </section>
-
-    <section aria-labelledby="course-help-title">
-      <h2 id="course-help-title">Why courses matter</h2>
-
-      <p>
-        Once your courses exist, StudyFlow can organize tasks, notes, study
-        sessions, and dashboard priorities by course.
-      </p>
-    </section>
+      </section>
+    </div>
   </main>
-
-  <footer>
-    <p>&copy; 2026 StudyFlow. Built for students who want better academic organization.</p>
-
-    <nav aria-label="Footer navigation">
-      <ul>
-        <li><a href="onboarding-semester.html">Back: semester</a></li>
-        <li><a href="onboarding-deadline.html">Next: deadline</a></li>
-        <li><a href="dashboard.html">Skip to dashboard</a></li>
-      </ul>
-    </nav>
-  </footer>
 </body>
 </html>

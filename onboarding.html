@@ -2,75 +2,104 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="description"
-    content="Welcome to StudyFlow onboarding. Set up your semester, courses, deadlines, and GPA goals."
-  >
-
   <title>Welcome to StudyFlow | Onboarding</title>
+  <meta name="description" content="Start setting up StudyFlow by creating your first semester, course, deadline, and GPA goal.">
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
-  <header>
-    <nav aria-label="Main navigation">
-      <a href="index.html">StudyFlow</a>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-      <ul>
-        <li><a href="dashboard.html">Skip to dashboard</a></li>
-        <li><a href="settings.html">Settings</a></li>
-        <li><a href="login.html">Log out</a></li>
-      </ul>
-    </nav>
-  </header>
+  <main id="main-content" class="onboarding-page">
+    <div class="onboarding-shell">
+      <section class="onboarding-card" aria-labelledby="onboarding-title">
+        <div class="stack-lg">
+          <header class="auth-header">
+            <a class="brand" href="index.html" aria-label="StudyFlow home">
+              <span class="brand-mark">SF</span>
+              <span>StudyFlow</span>
+            </a>
 
-  <main>
-    <section aria-labelledby="onboarding-title">
-      <h1 id="onboarding-title">Welcome to StudyFlow</h1>
+            <div class="stack-sm">
+              <p class="eyebrow">Getting started</p>
+              <h1 id="onboarding-title" class="auth-title">Welcome to StudyFlow</h1>
+              <p class="auth-description">
+                Let’s set up your academic workspace step by step so your dashboard feels useful from the beginning.
+              </p>
+            </div>
+          </header>
 
-      <p>
-        Let us set up your academic workspace so your dashboard starts with useful
-        information instead of being empty.
-      </p>
+          <ol class="onboarding-steps" aria-label="Onboarding progress">
+            <li class="onboarding-step active" aria-label="Step 1 of 5: Welcome"></li>
+            <li class="onboarding-step" aria-label="Step 2 of 5: Semester"></li>
+            <li class="onboarding-step" aria-label="Step 3 of 5: Course"></li>
+            <li class="onboarding-step" aria-label="Step 4 of 5: Deadline"></li>
+            <li class="onboarding-step" aria-label="Step 5 of 5: GPA goal"></li>
+          </ol>
 
-      <a href="onboarding-semester.html">Start setup</a>
-    </section>
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title">What you’ll set up</h2>
+              <p class="card-description">
+                This short flow creates the basic structure StudyFlow needs before you start using the dashboard.
+              </p>
 
-    <section aria-labelledby="setup-steps-title">
-      <h2 id="setup-steps-title">Your setup steps</h2>
+              <div class="divider"></div>
 
-      <ol>
-        <li>Create your first semester.</li>
-        <li>Add your first course.</li>
-        <li>Add your first deadline.</li>
-        <li>Optionally set a GPA goal.</li>
-        <li>Go to your dashboard.</li>
-      </ol>
-    </section>
+              <div class="stack">
+                <article class="list-item">
+                  <div>
+                    <h3 class="item-title">Create your first semester</h3>
+                    <p class="item-meta">Example: Spring 2026 or Fall 2026.</p>
+                  </div>
+                  <span class="badge badge-primary">Step 1</span>
+                </article>
 
-    <section aria-labelledby="why-onboarding-title">
-      <h2 id="why-onboarding-title">Why this setup matters</h2>
+                <article class="list-item">
+                  <div>
+                    <h3 class="item-title">Add your first course</h3>
+                    <p class="item-meta">Connect tasks, notes, and study plans to the right class.</p>
+                  </div>
+                  <span class="badge badge-accent">Step 2</span>
+                </article>
 
-      <p>
-        StudyFlow works best when it understands your current semester, courses,
-        and upcoming academic work. This helps the dashboard show relevant tasks,
-        deadlines, and priorities.
-      </p>
-    </section>
+                <article class="list-item">
+                  <div>
+                    <h3 class="item-title">Add an upcoming deadline</h3>
+                    <p class="item-meta">Give your dashboard something useful to highlight.</p>
+                  </div>
+                  <span class="badge badge-warning">Step 3</span>
+                </article>
+
+                <article class="list-item">
+                  <div>
+                    <h3 class="item-title">Set an optional GPA goal</h3>
+                    <p class="item-meta">Add a target so StudyFlow can later track progress.</p>
+                  </div>
+                  <span class="badge badge-success">Optional</span>
+                </article>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-actions-between">
+            <a class="btn btn-secondary" href="dashboard.html">Skip for now</a>
+            <a class="btn btn-primary" href="onboarding-semester.html">Start setup</a>
+          </div>
+
+          <p class="auth-meta">
+            Static prototype only. This setup flow will become interactive in a later phase.
+          </p>
+        </div>
+      </section>
+    </div>
   </main>
-
-  <footer>
-    <p>&copy; 2026 StudyFlow. Built for students who want better academic organization.</p>
-
-    <nav aria-label="Footer navigation">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="onboarding-semester.html">Create semester</a></li>
-        <li><a href="dashboard.html">Skip to dashboard</a></li>
-      </ul>
-    </nav>
-  </footer>
 </body>
 </html>
