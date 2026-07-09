@@ -7,18 +7,25 @@
 
   <meta
     name="description"
-    content="View and manage StudyFlow academic tasks, assignments, exams, projects, quizzes, readings, and deadlines."
+    content="View and manage academic tasks, deadlines, priorities, and completion status in StudyFlow."
   >
 
   <title>Tasks | StudyFlow</title>
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
-  <header>
-    <nav aria-label="Main navigation">
-      <a href="index.html">StudyFlow</a>
+  <header class="app-header">
+    <nav class="app-nav" aria-label="Main navigation">
+      <a class="brand" href="index.html">StudyFlow</a>
 
-      <ul>
+      <ul class="nav-list">
         <li><a href="dashboard.html">Dashboard</a></li>
         <li><a href="semesters.html">Semesters</a></li>
         <li><a href="courses.html">Courses</a></li>
@@ -29,209 +36,337 @@
         <li><a href="search.html">Search</a></li>
         <li><a href="notifications.html">Notifications</a></li>
         <li><a href="settings.html">Settings</a></li>
+        <li><a href="login.html">Log out</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section aria-labelledby="tasks-title">
-      <h1 id="tasks-title">Tasks and deadlines</h1>
+  <main class="app-main">
+    <section class="page-header" aria-labelledby="tasks-title">
+      <div>
+        <p class="eyebrow">Task command center</p>
+        <h1 id="tasks-title" class="page-title">Tasks</h1>
+        <p class="page-description">
+          Track assignments, quizzes, exams, projects, readings, labs, due dates,
+          priorities, and completion status across your courses.
+        </p>
+      </div>
 
-      <p>
-        Track assignments, quizzes, exams, projects, readings, labs, and custom
-        academic tasks across your courses.
-      </p>
-
-      <a href="#create-task-form">Create task</a>
+      <a class="btn btn-primary" href="#add-task-form">Add task</a>
     </section>
 
-    <section aria-labelledby="task-filters-title">
-      <h2 id="task-filters-title">Task filters</h2>
+    <section class="content-grid" aria-label="Task overview">
+      <article class="card highlight-card">
+        <div class="card-header">
+          <div>
+            <p class="eyebrow">Today</p>
+            <h2 class="section-title">Tasks needing attention</h2>
+          </div>
 
-      <form action="#" method="get">
-        <div>
-          <label for="course-filter">Course</label>
-          <select id="course-filter" name="course-filter">
-            <option value="">All courses</option>
-            <option value="biology-101">Biology 101</option>
-            <option value="calculus-1">Calculus I</option>
-            <option value="cs-101">Computer Science 101</option>
-          </select>
+          <span class="badge badge-danger">2 overdue</span>
         </div>
 
-        <div>
-          <label for="status-filter">Status</label>
-          <select id="status-filter" name="status-filter">
-            <option value="">All statuses</option>
-            <option value="not-started">Not started</option>
-            <option value="in-progress">In progress</option>
-            <option value="completed">Completed</option>
-            <option value="overdue">Overdue</option>
-          </select>
+        <p class="card-text">
+          You have overdue and high-priority work. This page is prepared for
+          filtering and completion behavior in the JavaScript phase.
+        </p>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-number">8</span>
+            <span class="stat-label">Open</span>
+          </div>
+
+          <div class="stat-card">
+            <span class="stat-number">14</span>
+            <span class="stat-label">Completed</span>
+          </div>
+
+          <div class="stat-card">
+            <span class="stat-number">3</span>
+            <span class="stat-label">High priority</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-header">
+          <div>
+            <p class="eyebrow">Weekly focus</p>
+            <h2 class="section-title">Deadline pressure</h2>
+          </div>
+
+          <span class="badge badge-warning">Busy week</span>
         </div>
 
-        <div>
-          <label for="priority-filter">Priority</label>
-          <select id="priority-filter" name="priority-filter">
-            <option value="">All priorities</option>
-            <option value="low">Low</option>
-            <option value="medium">Medium</option>
-            <option value="high">High</option>
-          </select>
+        <p class="card-text">
+          Three deadlines are coming up this week. Keep task type, course, and
+          priority clear so StudyFlow can rank work intelligently later.
+        </p>
+
+        <div class="progress-bar" aria-label="Weekly task pressure">
+          <span style="width: 74%;"></span>
         </div>
 
-        <button type="submit">Apply filters</button>
+        <p class="muted-text">Placeholder task pressure score for Phase 2.</p>
+      </article>
+    </section>
+
+    <section class="section-block" aria-labelledby="task-filters-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Filters</p>
+          <h2 id="task-filters-title" class="section-title">Task filters</h2>
+        </div>
+      </div>
+
+      <form class="card form-card" action="#" method="get">
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label" for="filter-course">Course</label>
+            <select class="form-input" id="filter-course" name="filter-course">
+              <option value="">All courses</option>
+              <option value="biology-101">Biology 101</option>
+              <option value="calculus-1">Calculus I</option>
+              <option value="cs-101">Computer Science 101</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="filter-status">Status</label>
+            <select class="form-input" id="filter-status" name="filter-status">
+              <option value="">All statuses</option>
+              <option value="open">Open</option>
+              <option value="completed">Completed</option>
+              <option value="overdue">Overdue</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="filter-priority">Priority</label>
+            <select class="form-input" id="filter-priority" name="filter-priority">
+              <option value="">All priorities</option>
+              <option value="high">High</option>
+              <option value="medium">Medium</option>
+              <option value="low">Low</option>
+            </select>
+          </div>
+        </div>
       </form>
     </section>
 
-    <section aria-labelledby="open-tasks-title">
-      <h2 id="open-tasks-title">Open tasks</h2>
+    <section class="section-block" aria-labelledby="task-list-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Active work</p>
+          <h2 id="task-list-title" class="section-title">Current tasks</h2>
+        </div>
+      </div>
 
-      <article>
-        <h3>Finish biology lab notes</h3>
-        <p>Course: Biology 101</p>
-        <p>Type: Lab</p>
-        <p>Due: Today</p>
-        <p>Priority: High</p>
-        <p>Status: In progress</p>
-      </article>
+      <div class="card-list">
+        <article class="card task-card">
+          <div class="card-header">
+            <div>
+              <h3>Biology lab notes</h3>
+              <p class="card-text">Biology 101 · Assignment</p>
+            </div>
 
-      <article>
-        <h3>Prepare for computer science quiz</h3>
-        <p>Course: Computer Science 101</p>
-        <p>Type: Quiz</p>
-        <p>Due: In 3 days</p>
-        <p>Priority: High</p>
-        <p>Status: Not started</p>
-      </article>
+            <span class="badge badge-danger">Overdue</span>
+          </div>
 
-      <article>
-        <h3>Read chapter 4</h3>
-        <p>Course: Biology 101</p>
-        <p>Type: Reading</p>
-        <p>Due: In 5 days</p>
-        <p>Priority: Medium</p>
-        <p>Status: Not started</p>
-      </article>
+          <p class="card-text">
+            Finish lab observations and submit notes before the next class.
+          </p>
+
+          <dl class="details-list">
+            <div>
+              <dt>Due</dt>
+              <dd>Yesterday</dd>
+            </div>
+            <div>
+              <dt>Priority</dt>
+              <dd>High</dd>
+            </div>
+            <div>
+              <dt>Status</dt>
+              <dd>Open</dd>
+            </div>
+          </dl>
+        </article>
+
+        <article class="card task-card">
+          <div class="card-header">
+            <div>
+              <h3>Computer science quiz review</h3>
+              <p class="card-text">Computer Science 101 · Quiz</p>
+            </div>
+
+            <span class="badge badge-warning">Due in 3 days</span>
+          </div>
+
+          <p class="card-text">
+            Review loops, arrays, conditionals, and basic problem-solving patterns.
+          </p>
+
+          <dl class="details-list">
+            <div>
+              <dt>Due</dt>
+              <dd>In 3 days</dd>
+            </div>
+            <div>
+              <dt>Priority</dt>
+              <dd>High</dd>
+            </div>
+            <div>
+              <dt>Status</dt>
+              <dd>Open</dd>
+            </div>
+          </dl>
+        </article>
+
+        <article class="card task-card">
+          <div class="card-header">
+            <div>
+              <h3>Calculus practice set</h3>
+              <p class="card-text">Calculus I · Practice</p>
+            </div>
+
+            <span class="badge badge-info">Upcoming</span>
+          </div>
+
+          <p class="card-text">
+            Complete derivative practice problems and mark difficult questions.
+          </p>
+
+          <dl class="details-list">
+            <div>
+              <dt>Due</dt>
+              <dd>Friday</dd>
+            </div>
+            <div>
+              <dt>Priority</dt>
+              <dd>Medium</dd>
+            </div>
+            <div>
+              <dt>Status</dt>
+              <dd>Open</dd>
+            </div>
+          </dl>
+        </article>
+      </div>
     </section>
 
-    <section aria-labelledby="overdue-tasks-title">
-      <h2 id="overdue-tasks-title">Overdue tasks</h2>
-
-      <article>
-        <h3>Submit chemistry worksheet</h3>
-        <p>Course: Chemistry 101</p>
-        <p>Type: Assignment</p>
-        <p>Was due: Yesterday</p>
-        <p>Priority: High</p>
-        <p>Status: Overdue</p>
-      </article>
-    </section>
-
-    <section aria-labelledby="completed-tasks-title">
-      <h2 id="completed-tasks-title">Completed tasks</h2>
-
-      <article>
-        <h3>Upload calculus practice set</h3>
-        <p>Course: Calculus I</p>
-        <p>Type: Assignment</p>
-        <p>Completed: Yesterday</p>
-      </article>
-    </section>
-
-    <section aria-labelledby="create-task-title" id="create-task-form">
-      <h2 id="create-task-title">Create task</h2>
-
-      <form action="#" method="post">
+    <section class="section-block" aria-labelledby="add-task-title" id="add-task-form">
+      <div class="section-heading">
         <div>
-          <label for="task-title">Task title</label>
-          <input
-            type="text"
-            id="task-title"
-            name="task-title"
-            required
-          >
+          <p class="eyebrow">New task</p>
+          <h2 id="add-task-title" class="section-title">Add task</h2>
+        </div>
+      </div>
+
+      <form class="card form-card" action="#" method="post">
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label" for="task-title">Task title</label>
+            <input
+              class="form-input"
+              type="text"
+              id="task-title"
+              name="task-title"
+              placeholder="Biology lab notes"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="task-course">Course</label>
+            <select class="form-input" id="task-course" name="task-course" required>
+              <option value="">Select course</option>
+              <option value="biology-101">Biology 101</option>
+              <option value="calculus-1">Calculus I</option>
+              <option value="cs-101">Computer Science 101</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="task-type">Task type</label>
+            <select class="form-input" id="task-type" name="task-type" required>
+              <option value="">Select type</option>
+              <option value="assignment">Assignment</option>
+              <option value="quiz">Quiz</option>
+              <option value="exam">Exam</option>
+              <option value="project">Project</option>
+              <option value="reading">Reading</option>
+              <option value="lab">Lab</option>
+              <option value="custom">Custom task</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="due-date">Due date</label>
+            <input
+              class="form-input"
+              type="date"
+              id="due-date"
+              name="due-date"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="task-priority">Priority</label>
+            <select class="form-input" id="task-priority" name="task-priority" required>
+              <option value="">Select priority</option>
+              <option value="high">High</option>
+              <option value="medium">Medium</option>
+              <option value="low">Low</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="estimated-effort">Estimated effort</label>
+            <input
+              class="form-input"
+              type="text"
+              id="estimated-effort"
+              name="estimated-effort"
+              placeholder="2 hours"
+            >
+          </div>
         </div>
 
-        <div>
-          <label for="task-course">Course</label>
-          <select id="task-course" name="task-course" required>
-            <option value="">Select course</option>
-            <option value="biology-101">Biology 101</option>
-            <option value="calculus-1">Calculus I</option>
-            <option value="cs-101">Computer Science 101</option>
-          </select>
-        </div>
-
-        <div>
-          <label for="task-type">Task type</label>
-          <select id="task-type" name="task-type" required>
-            <option value="">Select task type</option>
-            <option value="assignment">Assignment</option>
-            <option value="quiz">Quiz</option>
-            <option value="exam">Exam</option>
-            <option value="project">Project</option>
-            <option value="reading">Reading</option>
-            <option value="lab">Lab</option>
-            <option value="custom">Custom task</option>
-          </select>
-        </div>
-
-        <div>
-          <label for="due-date">Due date</label>
-          <input
-            type="date"
-            id="due-date"
-            name="due-date"
-            required
-          >
-        </div>
-
-        <div>
-          <label for="priority">Priority</label>
-          <select id="priority" name="priority" required>
-            <option value="">Select priority</option>
-            <option value="low">Low</option>
-            <option value="medium">Medium</option>
-            <option value="high">High</option>
-          </select>
-        </div>
-
-        <div>
-          <label for="estimated-effort">Estimated effort in hours</label>
-          <input
-            type="number"
-            id="estimated-effort"
-            name="estimated-effort"
-            min="0"
-            step="0.5"
-          >
-        </div>
-
-        <div>
-          <label for="task-description">Description</label>
+        <div class="form-group">
+          <label class="form-label" for="task-description">Description</label>
           <textarea
+            class="form-input"
             id="task-description"
             name="task-description"
-            rows="5"
+            rows="4"
+            placeholder="Add task details, requirements, or reminders."
           ></textarea>
         </div>
 
-        <button type="submit">Save task</button>
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit">Save task</button>
+          <a class="btn btn-secondary" href="dashboard.html">Cancel</a>
+        </div>
       </form>
     </section>
 
-    <section aria-labelledby="empty-tasks-title">
-      <h2 id="empty-tasks-title">Empty state example</h2>
+    <section class="empty-state" aria-labelledby="empty-tasks-title">
+      <p class="eyebrow">Empty state example</p>
+      <h2 id="empty-tasks-title">No tasks yet</h2>
 
       <p>
-        No tasks yet. Create your first task so StudyFlow can help you track
-        deadlines and academic priorities.
+        Add your first academic task so StudyFlow can help you track deadlines,
+        priorities, completion status, and course workload.
       </p>
+
+      <a class="btn btn-primary" href="#add-task-form">Add first task</a>
     </section>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <p>&copy; 2026 StudyFlow. Built for students who want better academic organization.</p>
   </footer>
 </body>
